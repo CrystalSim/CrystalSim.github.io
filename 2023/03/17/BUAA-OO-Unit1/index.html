@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="CrystalSim">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/03/17/buaa-oo-unit1/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hexo">
+    <meta property="og:description" content="Hexo Theme Redefine">
+    <meta property="og:url" content="http://example.com2023/03/17/BUAA-OO-Unit1/">
+    <meta property="og:image" content="/images/redefine-logo.svg">
+    <meta property="og:site_name" content="CrystalSim&#39;s Blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hexo">
+    <meta name="twitter:description" content="Hexo Theme Redefine">
+    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    
+    <title>
+        
+        CrystalSim&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/assets/fonts.css">
+    
+    
+    
+    
+        <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"https://evan.beee.top/img/wallhaven-wqery6-light.webp","dark":"https://evan.beee.top/img/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CrystalSim's Blog","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.1.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/regular.min.css">
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="menu-wrapper">
+    
+    <div class="menu-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                CrystalSim&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular"></h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">CrystalSim</span>
+                            
+                                <span class="author-label">lol</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-03-17 21:22:16</span>
+        <span class="mobile">2023-03-17 21:22</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="pc">2023-04-28 17:31:49</span>
+            <span class="mobile">2023-04-28 17:31</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <p>[TOC]</p>
+<h1 id="BUAA-OO-第一单元表达式展开"><a href="#BUAA-OO-第一单元表达式展开" class="headerlink" title="BUAA-OO 第一单元表达式展开"></a>BUAA-OO 第一单元表达式展开</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一单元主要通过对表达式结构进行建模，完成多变量多项式的括号展开，初步体会层次化设计思想。主要考察了Java基础语法和<strong>基本容器</strong>的使用，扩展BNF描述的形式化表述和<strong>正则表达式</strong>、<strong>递归下降</strong>等方法的使用。</p>
+<p>本单元一共有三次作业，第一次作业是多变量表达式的展开化简，第二次作业加入三角函数和自定义函数的形式，第三次作业加入求导因子dx，dy，dz，又新增了求导功能。这三次作业难度是层层递进的，经过近一个月，第一单元的学习终于临近结束，在本篇博客里，我将详细分析这三次作业的框架结构和注意事项，并分享我学习第一单元的心得体会。</p>
+<h2 id="基于度量来分析自己的程序结构"><a href="#基于度量来分析自己的程序结构" class="headerlink" title="基于度量来分析自己的程序结构"></a>基于度量来分析自己的程序结构</h2><h3 id="度量分析"><a href="#度量分析" class="headerlink" title="度量分析"></a>度量分析</h3><ul>
+<li><strong>度量类的属性个数、方法个数、每个方法规模、每个方法的控制分支数目、类总代码规模</strong>，<strong>计算经典的OO度量</strong></li>
+</ul>
+<p>首先看下图的复杂度分析，<code>MyComparator</code>类、<code>Parser</code>类和<code>Definer</code>类的复杂度都很高</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pic_oo_unit1/%E7%B1%BB%E7%9A%84OO%E5%BA%A6%E9%87%8F.png" alt="类的OO度量"></p>
+<p>下面贴上<code>Parser</code>类方法的复杂度图</p>
+<p><img lazyload src="/images/loading.svg" data-src="/%5Cpic_oo_unit1%5CParser%E5%86%85%E9%83%A8%E6%96%B9%E6%B3%95%E7%9A%84%E5%BA%A6%E9%87%8F.png" alt="Parser内部方法的度量"></p>
+<p>可以发现<code>parseFactor()</code>方法除了基本复杂度，其他指标都很高，它负责的工作很多，写的时候思路并没有那么清晰，需要结合注释理解才能看懂，增加了debug工作的难度。</p>
+<h3 id="代码的UML类图"><a href="#代码的UML类图" class="headerlink" title="代码的UML类图"></a>代码的UML类图</h3><p>第一单元作业代码的<code>UML</code>类图如下所示</p>
+<p><img lazyload src="/images/loading.svg" data-src="/%5Cpic_oo_unit1%5Ctest.png" alt="test"></p>
+<p><strong>分析类的内聚和相互间的耦合情况以及优缺点</strong></p>
+<ul>
+<li><p>各个类的设计考虑：</p>
+<ul>
+<li><p><code>Main</code>：主类，程序的主要流程</p>
+</li>
+<li><p><code>Definer</code>：解析自定义函数类，用于存储自定义函数定义、解析表达式中出现的自定义函数</p>
+</li>
+<li><p><code>Derivation</code>：求导因子类，用于存储表达式中出现的求导算子和被求导表达式</p>
+</li>
+<li><p><code>Expression</code>：表达式类，用于存储表达式或表达式因子</p>
+</li>
+<li><p><code>Factor</code>：因子类，用于存储因子类型和因子</p>
+</li>
+<li><p><code>FunFactor</code>：自定义函数因子类，用于存储自定义函数因子</p>
+</li>
+<li><p><code>Function</code>：幂函数因子类</p>
+</li>
+<li><p><code>Item</code>：单项式类</p>
+</li>
+<li><p><code>Lexer</code>：词法解析器</p>
+</li>
+<li><p><code>Multinomial</code>：多项式类</p>
+</li>
+<li><p><code>MyCompartor</code>：用于排序</p>
+</li>
+<li><p><code>Parser</code>：语法分析器</p>
+</li>
+<li><p><code>Process</code>：用于初步处理表达式，去除空白字符和化简加减号</p>
+</li>
+<li><p><code>Term</code>：项类</p>
+</li>
+<li><p><code>Token</code>：用于存储表达式中每类字符及其类型</p>
+</li>
+<li><p><code>TriangleFactor</code>：三角函数因子类</p>
+</li>
+</ul>
+</li>
+<li><p>设计缺点：</p>
+<ul>
+<li>应该将<code>Factor</code>设为接口，每次用type判断因子类型很麻烦，而且存储空间利用率小</li>
+<li><code>MyComparator</code>类可以省去，因为按照x y z的指数排序其实并不重要</li>
+<li><code>Lexer</code>类用正则表达式解析词法过于繁琐，用多重if-else判断增加复杂度</li>
+<li><code>Process</code>类多余，直接化简即可</li>
+<li>利用多项式单项式进行求导很繁琐，应该改为利用因子、项和表达式的特点进行层次化求导</li>
+</ul>
+</li>
+<li><p>设计优点</p>
+<ul>
+<li>递归下降的使用</li>
+<li>利用单项式多项式的结构处理表达式较为清晰，且很多方法可以复用如多项式的加法和乘法</li>
+</ul>
+</li>
+</ul>
+<h2 id="第一次作业分析"><a href="#第一次作业分析" class="headerlink" title="第一次作业分析"></a>第一次作业分析</h2><p>第一次作业的任务：读入一个包含加、减、乘、乘方以及括号的多变量表达式，输出恒等变形展开所有括号后的表达式。</p>
+<p>其中，表达式由多个项加减而成，每个项由多个因子相乘得到。本次作业中因子包括变量因子（幂函数）、常数因子（带符号整数）、表达式因子（’(‘表达式’)’ [空白项 指数])</p>
+<h3 id="代码架构分析"><a href="#代码架构分析" class="headerlink" title="代码架构分析"></a>代码架构分析</h3><p>分别建立<code>Expression</code>类、<code>Term</code>类、各种<code>Factor</code>类来存储表达式中各个元素。其中<code>Expression</code>类中用两个<code>Arraylist</code>分别存储<code>Term</code>和每个<code>Term</code>前的符号，<code>Term</code>类中用<code>Arraylist</code>存储每个<code>Factor</code>。</p>
+<h4 id="递归下降解析表达式"><a href="#递归下降解析表达式" class="headerlink" title="递归下降解析表达式"></a>递归下降解析表达式</h4><p>首先用正则表达式构建<code>Lexer</code>类，即将表达式拆分成一个个字符类型。例如：<code>（x**2+y)*3</code>，解析得出<code>tokens</code>即为<code>(,x,**,2,+,y,),*,3</code></p>
+<p><strong><code>Lexer</code>部分代码</strong></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Lexer</span> &#123;	</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">private</span> ArrayList&lt;Token&gt; tokens = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> position;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">UNKNOWN</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(x|y|z)&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">EXPONENTSIGN</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(?&lt;content&gt;\\*\\*)&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">NUMBER</span> <span class="operator">=</span> <span class="string">&quot;^\\s*([\\+\\-]?[0-9]+)&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SIGN</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(?&lt;content&gt;\\+|\\-|\\*)&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">LEFT</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(?&lt;content&gt;\\()&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">RIGHT</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(?&lt;content&gt;\\))&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">FUNC</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(?&lt;content&gt;f|g|h)&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">DOC</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(,)&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SINCOS</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(sin|cos)&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">DERIVATIVE</span> <span class="operator">=</span> <span class="string">&quot;^\\s*(dx|dy|dz)&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">Lexer</span><span class="params">(String temp)</span> &#123;</span><br><span class="line">    	<span class="built_in">this</span>.position = <span class="number">0</span>;</span><br><span class="line">   		<span class="type">int</span> <span class="variable">des</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    	<span class="type">int</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="number">0</span>;<span class="comment">//表示可把符号作为第一项符号</span></span><br><span class="line">     	<span class="keyword">while</span> (des &lt; temp.length()) &#123;</span><br><span class="line">            <span class="comment">//正则匹配各个Token</span></span><br><span class="line">            <span class="comment">//......</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">next</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.position++;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.position &lt; tokens.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">back</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.position--;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.position &gt;= <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">judge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.position &lt; tokens.size();</span><br><span class="line">    &#125;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p><code>Parser</code>类中包含上文解析所得的一个<code>Lexer</code>，然后就是各种解析方法，包括<code>parseFactor()</code>，<code>parseTerm()</code>，<code>parseExpr()</code>等。</p>
+<p><strong>Parser部分代码</strong></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Parser</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Lexer lexer;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setLexer</span><span class="params">(Lexer lexer)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.lexer = lexer;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> Factor <span class="title function_">parseFactor</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//parseFactor解析并返回Factor对象</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> Term <span class="title function_">parseTerm</span><span class="params">()</span> &#123;</span><br><span class="line">     	<span class="comment">//parseTerm解析并返回Term</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Expression <span class="title function_">parseExp</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//parseExpr解析返回Expression</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">   	<span class="keyword">public</span> Function <span class="title function_">parsePowerFunction</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//parsePowerFunction解析并返回Function(幂函数因子)</span></span><br><span class="line">    &#125;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="表达式展开"><a href="#表达式展开" class="headerlink" title="表达式展开"></a>表达式展开</h4><p>新建立两个类<code>Item</code>和<code>Multinomial</code>分别处理<strong>表达式展开后</strong>的单项式和多项式。</p>
+<p><code>Item</code>类中含有系数<code>number</code>，x y z的指数<code>ex</code>、<code>ey</code>、<code>ez</code>，还有方法<code>toString()</code>将<strong>单项式转为字符串</strong>便于输出。</p>
+<p><code>Multinomial</code>类中含有<code>Hashset</code>用于存储<code>Item</code>集合，以及方法<code>toString()</code>，还包括了<code>addFor()</code>,<code>mulFor()</code>,<code>powFor()</code>,<code>simplify()</code>分别进行多项式加法、乘法、乘方和<strong>多项式简化</strong>。</p>
+<p><strong>powFor()的部分代码</strong></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Multinomial <span class="title function_">powFor</span><span class="params">(<span class="type">int</span> temp)</span> &#123;</span><br><span class="line">       <span class="type">Multinomial</span> <span class="variable">result</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Multinomial</span>();</span><br><span class="line">       <span class="keyword">if</span> (temp == <span class="number">0</span>) &#123;</span><br><span class="line">           <span class="type">Item</span> <span class="variable">item</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Item</span>(<span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="string">&quot;1&quot;</span>),<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">           result.items.add(item);</span><br><span class="line">           <span class="keyword">return</span> result;</span><br><span class="line">       &#125; <span class="keyword">else</span> <span class="keyword">if</span> (temp == <span class="number">1</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; temp;i++) &#123;</span><br><span class="line">           result = result.mulFor(<span class="built_in">this</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       result.simplify();</span><br><span class="line">       <span class="keyword">return</span> result;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="注意细节"><a href="#注意细节" class="headerlink" title="注意细节"></a>注意细节</h3><ul>
+<li>在预处理表达式时，除了处理多个符号，还要记得去除所有<strong>空格</strong>和<strong>\t</strong> (第二次作业bug就出在这里o(╥﹏╥)o。</li>
+<li>解析<code>parser</code>时一定要注意<code>lexer</code>的位置，多想几遍有没有多向前一步或者少向前一步，这个地方极易出bug</li>
+<li>解析表达式因子时记得括号外面可能还会有指数！</li>
+<li>优化时，记得判断最终结果是不是为空，为空就输出0</li>
+</ul>
+<h3 id="BUG分析"><a href="#BUG分析" class="headerlink" title="BUG分析"></a>BUG分析</h3><p>第一次作业暂时未发现bug(事实证明只是没发现，并不是没有)</p>
+<h2 id="第二次作业分析"><a href="#第二次作业分析" class="headerlink" title="第二次作业分析"></a>第二次作业分析</h2><p>第二次作业在第一次作业的基础上增加了一系列<strong>自定义函数</strong>和<strong>三角函数因子</strong></p>
+<ul>
+<li><p><em>三角函数因子</em>：类似于幂函数，由<code>sin(&lt;因子&gt;)</code>或<code>cos(&lt;因子&gt;)</code> 、指数符号<code>**</code>和指数组成</p>
+</li>
+<li><ul>
+<li><p>自定义函数的定义：形如 <code>f(x, y, z) = 函数表达式</code> ，比如 <code>f(y) = y**2</code>  </p>
+</li>
+<li><p>自定义函数的<strong>调用</strong>形如 <code>f(因子, 因子, 因子)</code></p>
+</li>
+<li><p><code>x</code>、<code>y</code>、<code>z</code> 为函数的<strong>形参</strong>。在本次作业中，<strong>形参个数为 1~3 个</strong>。形参**只使用 <code>x</code>，<code>y</code>，<code>z</code>**，且同一函数定义中不会出现重复使用的形参</p>
+</li>
+<li><p><code>f</code> 、<code>g</code>、<code>h</code> 是函数的<strong>函数名</strong>。在本次作业中，保证函数名<strong>只使用 <code>f</code> ，<code>g</code>，<code>h</code><strong>，且</strong>不出现同名函数的重复定义</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="自定义函数的解析"><a href="#自定义函数的解析" class="headerlink" title="自定义函数的解析"></a>自定义函数的解析</h3><p>对于自定义函数，新增了<code>FuncFactor</code>和<code>Definer</code>两个类，分别用来<strong>存储</strong>和<strong>解析</strong>自定义函数。对于<code>Lexer</code>和<code>Parser</code>类中也进行了改动。</p>
+<ul>
+<li><p><strong>Definer</strong></p>
+<p><code>Definer</code>类中包含两个<code>Hashmap</code>，第一个<code>parameters</code>键值对为<code>&lt;String,Arraylist&lt;String&gt;&gt;</code>，用来存储函数名和形参集合映射；第二个<code>functions</code>键值对为<code>&lt;String,String&gt;</code>，用来存储函数名和函数定义式映射。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> HashMap&lt;String,ArrayList&lt;String&gt;&gt; parameters = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();<span class="comment">//函数名，形参集合</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> HashMap&lt;String,String&gt; functions = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();<span class="comment">//函数名，定义式</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p><code>Definer</code>类中还包括<code>addFunc()</code>和<code>callFunc()</code>两个方法，分别用来<strong>存储函数形参</strong>、<strong>定义式</strong>和处理表达式中的自定义函数。</p>
+<p>对于开始输入自定义函数及其定义时，用<code>addFunc()</code>方法解析并存储对应函数名的定义式中各形参集合，存储并化简函数的定义式。</p>
+<p>在处理完所有自定义函数后，解析表达式时若遇到自定义函数，则用<code>callFunc()</code>方法处理该部分。解析出表达式自定义函数中的实参，通过函数名，得到对应定义式和形参集合，将定义式中的<strong>形参替换为实参</strong>，再对替换完的字符串进行解析，得到最终表达式。</p>
+<blockquote>
+<p>注意：在用<code>replaceAll()</code>替换形参时，若有多个形参，可能会造成替换错误。所以，可以在存储函数自定义函数的定义式和形参时用u,v,w代替x,y,z,以免出错。</p>
+</blockquote>
+</li>
+<li><p><strong>FuncFactor</strong></p>
+<p><code>FuncFactor</code>类中包含一个<code>String</code>类型的<code>updateFunc</code>，表示将形参替换为实参后的字符串，还有一个<code>Expression</code>类型的<code>expression</code>，存储将前者字符串解析后的表达式。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FuncFactor</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String updateFunc;<span class="comment">//实参带入后的结果</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> Expression expression;<span class="comment">//解析成表达式</span></span><br><span class="line">    </span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="三角函数的解析"><a href="#三角函数的解析" class="headerlink" title="三角函数的解析"></a>三角函数的解析</h3><p>对于三角函数，增加了<code>TriangleFactor</code>类用于存储三角函数；</p>
+<p>在解析表达式方面对于<code>Lexer</code>类和<code>Parser</code>类进行了改动；</p>
+<p>在表达式展开方面，对于Item类新增了两个<code>HashMap</code>，键值对均为&lt;<code>Multinomial</code>,<code>int</code>&gt;，分别用来存储sin集合和cos集合，其<code>toString()</code>方法也要进行修改。（PS：以sin为例，<code>Multinomial</code>为sin内部多项式，<code>int</code>为sin的指数）</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Item</span> &#123;</span><br><span class="line">    <span class="comment">//单项式</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> ex;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> ey;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> ez;<span class="comment">//表示x，y，z的指数</span></span><br><span class="line">    <span class="keyword">private</span> BigInteger number;</span><br><span class="line">    <span class="comment">//sin()里多项式，三角函数指数</span></span><br><span class="line">    <span class="keyword">private</span> HashMap&lt;Multinomial,Integer&gt; sinUnit = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> HashMap&lt;Multinomial,Integer&gt; cosUnit = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>对于<code>Multinominal</code>类对于加法、乘法、化简等方法做一些改动。</p>
+<blockquote>
+<p><strong>ATTENTION！！！</strong></p>
+<ul>
+<li>在实现<code>Multinominal</code>对象的运算时，对任何类最好都进行<strong>深克隆</strong>（浅克隆容易出bug）</li>
+</ul>
+<p>因为浅克隆只是复制了该对象的引用，当改变对象中变量的值时，被克隆对象的相应值也发生改变</p>
+<ul>
+<li>在对Multinomial进行合并同类项化简时，注意如果这个Multinomial中所有Item全部消除为0时（此时items为空），多加一个number为0的Item对象进Multinomial，表示此时多项式为0，防止运算时出现错误</li>
+</ul>
+</blockquote>
+<p>对于<code>TriangleFactor</code>类，其中包含<code>String</code>类型的<code>type</code>，<code>Factor</code>类型的<code>factor</code>，<code>int</code>类型的<code>exp</code>，分别用来记录当前因子是sin|cos，存储三角函数内部因子和记录三角函数的指数。</p>
+<blockquote>
+<p>sin(0) &#x3D; 0</p>
+<p>cos(0) &#x3D; 1</p>
+</blockquote>
+<p>为了便于三角函数的进一步化简即合并同类项，我在这里对<code>Multinominal</code>和<code>Item</code>类的<code>hashcode</code>和<code>equals</code>方法进行<strong>重写</strong>，重写代码如下：</p>
+<p><strong>Item</strong></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">this</span> == o) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span> (o == <span class="literal">null</span> || getClass() != o.getClass()) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="type">Item</span> <span class="variable">item</span> <span class="operator">=</span> (Item) o;</span><br><span class="line">		<span class="keyword">return</span> ex == item.ex &amp;&amp; ey == item.ey &amp;&amp; ez == item.ez 				&amp;&amp;Objects.equals(number, item.number)&amp;&amp; 					Objects.equals(sinUnit, item.sinUnit) &amp;&amp; 					Objects.equals(cosUnit, item.cosUnit);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> Objects.hash(ex, ey, ez, number, sinUnit, cosUnit);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p><strong>Multinomial</strong></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span> == o) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (o == <span class="literal">null</span> || getClass() != o.getClass()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">Multinomial</span> <span class="variable">that</span> <span class="operator">=</span> (Multinomial) o;</span><br><span class="line">    <span class="keyword">return</span> Objects.equals(items, that.items);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> Objects.hash(items);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<blockquote>
+<p>注意，在重写了<code>hashcode</code>和<code>equals</code>方法后，在<code>Hashmap</code>和<code>Hashset</code>中用<code>Item</code>或<code>Multinomial</code>作为键时，添加元素时要<strong>提前判断该键是否已存在</strong>集合里，若已存在，对已有元素的int值进行累加，反之直接add。（若不加判断直接add，原数据会被覆盖）</p>
+</blockquote>
+<h3 id="BUG分析-1"><a href="#BUG分析-1" class="headerlink" title="BUG分析"></a>BUG分析</h3><p>第二次作业的强测很惨很惨，这也让我发现了第一次作业没发现的bug</p>
+<ul>
+<li>在中测时，发现了<code>Multinomial</code>类中表达式进行乘法、加法时出现的浅克隆的bug，这种情况我最后都修改成了深克隆，bug就修复完成了</li>
+<li>在初步处理表达式时，没有把<code>\t</code>去除。我仅仅用了<code>replaceAll(&quot; &quot;,&quot;&quot;)</code>去除了所有空格，而忘记了<code>\t</code>也是题目中提到的空白字符www</li>
+<li>最后，强测中发现我的sin(0)在<code>Item</code>类的<code>toString()</code>中转为字符串是”1”,但是应该是”0”啊啊啊啊啊</li>
+</ul>
+<h2 id="第三次作业解析"><a href="#第三次作业解析" class="headerlink" title="第三次作业解析"></a>第三次作业解析</h2><p>第三次作业在第二次作业的基础上，新增了<strong>求导算子</strong>的概念，作业要求仍是对表达式进行展开和化简，但是最终结果不能包括括号和求导算子。</p>
+<ul>
+<li><p><em>求导因子</em></p>
+<ul>
+<li>求导因子可以出现在很多位置，包括<strong>函数调用实参</strong>，<strong>函数定义表达式</strong>，<strong>三角函数内部</strong>。</li>
+<li>由<code>dx(表达式)</code>,<code>dy(表达式)</code>,<code>dz(表达式)</code>三种算符构成，分别代表对表达式的x变量求导，对表达式的y变量求导，对表达式的z变量求导。</li>
+<li>由于本单元表达式自变量有三个分别为x,y,z，因此<strong>这里的求导可以理解为偏导</strong>。</li>
+<li>为了保证<strong>结果一致性</strong>，自定义函数内包含求导因子，当调用该函数时，先将自定义函数表达式求导后再代入实参。例如函数<code>h(x) = dx(x)</code>,自定义函数调用<code>h(sin(x)) = 1</code>而不是<code>h(sin(x))=cos(x)</code>。</li>
+</ul>
+</li>
+<li><p><em>求导公式</em></p>
+<p>本次作业可能用到的<strong>求导公式</strong>有：<br>$$<br>Ⅰ.当f(x)&#x3D;c（c为常数）时，f’(x)&#x3D;0<br>$$</p>
+<p>$$<br>Ⅱ.当f(x)&#x3D;x^n （n&#x3D;0）时。f’(x)&#x3D;n \ast x ^ {n-1}<br>$$</p>
+<p>$$<br>Ⅲ.当f(x)&#x3D;sin(x)时，f’(x)&#x3D;cos(x)<br>$$</p>
+<p>$$<br>Ⅳ.当f(x)&#x3D;cos(x)时，f’(x)&#x3D;−sin(x)<br>$$</p>
+<p>$$<br>Ⅴ.链式法则：[f(g(x))]’&#x3D;f’(g(x))g’(x)<br>$$</p>
+<p>$$<br>Ⅵ.乘法法则：[f(x)g(x)]’&#x3D;f’(x)g(x)+f(x)g’(x)<br>$$</p>
+</li>
+</ul>
+<h3 id="求导算子的实现"><a href="#求导算子的实现" class="headerlink" title="求导算子的实现"></a>求导算子的实现</h3><h4 id="求导因子的解析"><a href="#求导因子的解析" class="headerlink" title="求导因子的解析"></a>求导因子的解析</h4><p>本次作业新增了<code>Derivation</code>类，用于存储求导因子。修改了<code>Lexer</code>和<code>Parser</code>类，新增了求导因子的解析方法，和前几种因子写法类似。</p>
+<p>Derivation类的部分代码如下：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Derivation</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>();<span class="comment">//x|y|z</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Factor</span> <span class="variable">factor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Factor</span>();<span class="comment">//表达式因子(expr)</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Multinomial</span> <span class="variable">processed</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Multinomial</span>();<span class="comment">//已求导多项式</span></span><br><span class="line"> 	</span><br><span class="line">    ......    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="求导方法的实现"><a href="#求导方法的实现" class="headerlink" title="求导方法的实现"></a>求导方法的实现</h4><p>由于所有因子、项、表达式最终都可转换为<strong>多项式</strong>，并且对多项式求导只需逐个对多项式中<strong>单项式求导</strong>，所得的求导结果相加即可求得最终结果，所以本文采用对多项式和单项式求导的方法解决对求导因子的化简。</p>
+<p>因为Item的存储形式为 <code>number * x**ex * y**ey * z**ez * sinUnits * cosUnits </code>  ,根据求导公式的特点可将每个Item对象分为三部分 ：</p>
+<ul>
+<li>section 1：<code>( number * x**ex * y**ey * z**ez )</code></li>
+<li>section 2：<code>(sinUnits)</code></li>
+<li>section 3：<code>(cosUnits)</code></li>
+</ul>
+<p>整个Item即为这三部分相乘，那么根据乘法法则，单项式求导结果即为：</p>
+<p>(1)’ * (2) * (3) + (2)’ * (1) * (3) + (3)’ * (1) * (2)</p>
+<blockquote>
+<p>(1)代表section 1 ，(2) 代表section 2 ，(3)代表section 3</p>
+</blockquote>
+<ol>
+<li><p>对于<strong>section 1</strong> 的求导根据求导公式一次即可求出。</p>
+</li>
+<li><p>对于<strong>section 2</strong> 的求导：</p>
+</li>
+</ol>
+<p>​	对于sin集合，遍历<code>Hashmap</code>，对于每次取得的**&lt;Multinomial,int&gt;** ,根据链式法则</p>
+<ul>
+<li>先判断int是否大于0，若等于0直接得出求导结果为0，若大于0则得出第一部分求导结果为exp * sin(Multinomial)**(exp -1)</li>
+<li>再对sin本身求导，根据三角函数求导公式可得第二部分求导结果为cos(Multinomial)</li>
+<li>再对Multinomial求导，用多项式求导方法返回求导结果</li>
+<li>section 2求导结果即为这三部分相乘</li>
+</ul>
+<p>​	最终求导结果为<code>HashMap</code>中每个元素的求导结果乘其他各个元素，再一起相加。</p>
+<ol start="3">
+<li>对于<strong>section 3</strong> 的求导和section 2 部分类似，注意d(cos(x)) &#x3D; -sin(x)</li>
+</ol>
+<blockquote>
+<p>ATTENTION</p>
+<p>求导运算时也要时刻注意运用<strong>深克隆</strong>！！！</p>
+</blockquote>
+<h3 id="BUG分析-2"><a href="#BUG分析-2" class="headerlink" title="BUG分析"></a>BUG分析</h3><ul>
+<li><p>这次作业主要发现的bug就是，用<code>Hashset</code>存储<code>Item</code>时，应当<strong>判断容器中是不是有相同key存在</strong></p>
+<p>我一开始写法如下：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当前操作想要把item放入items中，如果有相同key，就删除原有key，再把item的系数加倍，放入items</span></span><br><span class="line"><span class="keyword">if</span> (items.contain(item)) &#123;</span><br><span class="line">	items.remove(item);</span><br><span class="line">	items.setNumber(item.getNumber().multiply(<span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="string">&quot;2&quot;</span>)));</span><br><span class="line">	items.add(item);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	items.add(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>是不是看起来很合理！！！其实并不……因为我没有考虑到<strong>item系数加倍后的新item</strong>，在items容器中有没有<strong>重复的key</strong>！！！</p>
+<p>最终我的修改如下：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">while</span>(items.contains(item)) &#123;</span><br><span class="line"> 		result.deleteItem(item);<span class="comment">//删去原有item</span></span><br><span class="line">        item.setNumber(item.getNumber().multiply(<span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="string">&quot;2&quot;</span>)));</span><br><span class="line">&#125;</span><br><span class="line">items.setItems(item);</span><br></pre></td></tr></table></figure></div>
+
+<p>这次的bug让我很懊恼，因为我确实考虑到了key已经存在的情况，但是由于我的考虑并不全面，所以出了这样的bug</p>
+</li>
+</ul>
+<h2 id="第一单元心得体会"><a href="#第一单元心得体会" class="headerlink" title="第一单元心得体会"></a>第一单元心得体会</h2><p>​		第一单元的学习在每周二晚上拿到题目，周三开始住在咖啡厅、教室写代码和debug中<strong>艰难</strong>地度过。感觉最为困难的是第一次作业，因为毕竟是一个从零开始的新作业，也是第一次接触到OO。</p>
+<p>​		经过这一单元的学习，我对递归下降有了一个全新的认识，也大概了解了面向对象的思想和方法。诚然，我对自己这几次作业是不太满意的，光从我的代码就可以看出来，思路并不清晰，架构没有那么漂亮，方法很繁琐，代码很冗长，这是一份可读性很差，bug又很多的代码。但是，从这三次作业中，我也收获了很多感悟，并下定决心（qwp）下一个单元在写代码之前一点要把架构想清楚，多使用层次化管理的方法，多简化自己的方法和代码，增加其可读性。而且，一定不要过了中测就沾沾自喜，不然就会有<strong>一堆bug</strong>在强测等着你(寄)，多分块测试自己代码的正确性。</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：</li>
+        <li>Post author：CrystalSim</li>
+        <li>Create time：2023-03-17 21:22:16</li>
+        <li>
+            Post link：https://crystalsim.github.io/2023/03/17/BUAA-OO-Unit1/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/03/07/myFirstBlog/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">lab0上机总结</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BUAA-OO-%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B1%95%E5%BC%80"><span class="nav-number">1.</span> <span class="nav-text">BUAA-OO 第一单元表达式展开</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%BA%A6%E9%87%8F%E6%9D%A5%E5%88%86%E6%9E%90%E8%87%AA%E5%B7%B1%E7%9A%84%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">基于度量来分析自己的程序结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%A6%E9%87%8F%E5%88%86%E6%9E%90"><span class="nav-number">1.2.1.</span> <span class="nav-text">度量分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%9A%84UML%E7%B1%BB%E5%9B%BE"><span class="nav-number">1.2.2.</span> <span class="nav-text">代码的UML类图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A%E5%88%86%E6%9E%90"><span class="nav-number">1.3.</span> <span class="nav-text">第一次作业分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90"><span class="nav-number">1.3.1.</span> <span class="nav-text">代码架构分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E4%B8%8B%E9%99%8D%E8%A7%A3%E6%9E%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">递归下降解析表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B1%95%E5%BC%80"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">表达式展开</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%BB%86%E8%8A%82"><span class="nav-number">1.3.2.</span> <span class="nav-text">注意细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BUG%E5%88%86%E6%9E%90"><span class="nav-number">1.3.3.</span> <span class="nav-text">BUG分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A%E5%88%86%E6%9E%90"><span class="nav-number">1.4.</span> <span class="nav-text">第二次作业分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E8%A7%A3%E6%9E%90"><span class="nav-number">1.4.1.</span> <span class="nav-text">自定义函数的解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%9A%84%E8%A7%A3%E6%9E%90"><span class="nav-number">1.4.2.</span> <span class="nav-text">三角函数的解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BUG%E5%88%86%E6%9E%90-1"><span class="nav-number">1.4.3.</span> <span class="nav-text">BUG分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A%E8%A7%A3%E6%9E%90"><span class="nav-number">1.5.</span> <span class="nav-text">第三次作业解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82%E5%AF%BC%E7%AE%97%E5%AD%90%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.5.1.</span> <span class="nav-text">求导算子的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%82%E5%AF%BC%E5%9B%A0%E5%AD%90%E7%9A%84%E8%A7%A3%E6%9E%90"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">求导因子的解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%82%E5%AF%BC%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">求导方法的实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BUG%E5%88%86%E6%9E%90-2"><span class="nav-number">1.5.2.</span> <span class="nav-text">BUG分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A"><span class="nav-number">1.6.</span> <span class="nav-text">第一单元心得体会</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CrystalSim</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br> 
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.1.3</a>
+        </div>
+        
+        
+        
+            <div id="start_time_div" style="display:none">
+                2023/2/25 23:22:00
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="unfolded-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="folded-tools-list">
+        <li class="right-bottom-tools tool-toggle-show flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/utils.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/main.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/menu-shrink.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/go-top-bottom.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/dark-light-toggle.js"></script>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/local-search.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/code-block.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/runtime.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/assets/odometer-theme-minimal.css">
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/toc-toggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/plugins/tabs.js"></script>
+    
+    
+</div>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

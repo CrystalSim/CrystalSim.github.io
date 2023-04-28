@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="CrystalSim">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/03/07/myfirstblog/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="lab0上机总结">
+    <meta property="og:description" content="Hexo Theme Redefine">
+    <meta property="og:url" content="http://example.com2023/03/07/myFirstBlog/">
+    <meta property="og:image" content="/images/redefine-logo.svg">
+    <meta property="og:site_name" content="CrystalSim&#39;s Blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="lab0上机总结">
+    <meta name="twitter:description" content="Hexo Theme Redefine">
+    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    
+    <title>
+        
+            lab0上机总结 -
+        
+        CrystalSim&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/assets/fonts.css">
+    
+    
+    
+    
+        <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"https://evan.beee.top/img/wallhaven-wqery6-light.webp","dark":"https://evan.beee.top/img/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CrystalSim's Blog","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.1.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/regular.min.css">
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="menu-wrapper">
+    
+    <div class="menu-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                CrystalSim&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">lab0上机总结</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">CrystalSim</span>
+                            
+                                <span class="author-label">lol</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-03-07 00:13:05</span>
+        <span class="mobile">2023-03-07 00:13</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="pc">2023-03-12 20:08:38</span>
+            <span class="mobile">2023-03-12 20:08</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="lab0上机总结"><a href="#lab0上机总结" class="headerlink" title="lab0上机总结"></a>lab0上机总结</h1><ul>
+<li><h2 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h2><blockquote>
+<h3 id="change-mode"><a href="#change-mode" class="headerlink" title="change mode"></a>change mode</h3><p> 文件调用权限：Owner、Group、Other Users</p>
+<p> chmod [-cfvR] [–help] [–version] mode file…</p>
+<ul>
+<li><h3 id="mode-ugoa…-x3D-rwxX-…-…"><a href="#mode-ugoa…-x3D-rwxX-…-…" class="headerlink" title="mode : [ugoa…] [ [+-&#x3D;] [rwxX]…] [,…]"></a>mode : [ugoa…] [ [+-&#x3D;] [rwxX]…] [,…]</h3></li>
+</ul>
+<ol>
+<li>u(user)表示该文件的拥有者，g(group)表示与该文件拥有者属于同一个group者，o(others)表示其他以外的人，a(all)表示这三者皆是</li>
+<li>+表示增加权限，-表示取消权限，&#x3D;表示唯一设定权限</li>
+<li>r表示可读取，w表示可写入，x表示可执行，X表示只有当该文件是个子目录或者该文件已经被设定过为可执行</li>
+<li>八进制语法：文件或目录的权限位是由9个权限位来控制，每三位为一组，它们分别是文件所有者（User）的读、写、执行，用户组（Group）的读、写、执行以及其它用户（Other）的读、写、执行。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>权限</th>
+<th>rwx</th>
+<th>二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>读+写+执行</td>
+<td>rwx</td>
+<td>111</td>
+</tr>
+<tr>
+<td>6</td>
+<td>读+写</td>
+<td>rw-</td>
+<td>110</td>
+</tr>
+<tr>
+<td>5</td>
+<td>读+执行</td>
+<td>r-x</td>
+<td>101</td>
+</tr>
+<tr>
+<td>4</td>
+<td>只读</td>
+<td>r–</td>
+<td>100</td>
+</tr>
+<tr>
+<td>3</td>
+<td>写+执行</td>
+<td>-wx</td>
+<td>011</td>
+</tr>
+<tr>
+<td>2</td>
+<td>只写</td>
+<td>-w-</td>
+<td>010</td>
+</tr>
+<tr>
+<td>1</td>
+<td>只执行</td>
+<td>–x</td>
+<td>001</td>
+</tr>
+<tr>
+<td>0</td>
+<td>无</td>
+<td>—</td>
+<td>000</td>
+</tr>
+</tbody></table>
+<p>例如，765 ：u对应7，g对应6，o对应5</p>
+<ul>
+<li><h2 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h2><blockquote>
+<p>tail [参数] [文件]</p>
+<p>-f : 循环读取</p>
+<p>-q : 不显示处理信息</p>
+<p>-v : 显示详细的处理信息</p>
+<p>-c&lt;数目&gt; 显示的字节数</p>
+<p>-n&lt;行数&gt; 显示文件的尾部n行内容</p>
+<p>tail file 默认显示最后10行</p>
+<p>tail -n +10 表示从第十行到最后一行</p>
+</blockquote>
+</li>
+<li><h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><p>diff 以逐行的方式，比较文本文件的异同处。如果指定要比较目录，则 diff 会比较目录中相同文件名的文件，但不会比较其中子目录。</p>
+<blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diff [-abBcdefHilnNpPqrstTuvwy][-&lt;行数&gt;][-C &lt;行数&gt;][-D &lt;巨集名称&gt;][-I &lt;字符或字符串&gt;][-S &lt;文件&gt;][-W &lt;宽度&gt;][-x &lt;文件或目录&gt;][-X &lt;文件&gt;][--help][--left-column][--suppress-common-line][文件或目录1][文件或目录2]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+</li>
+<li><h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><blockquote>
+<p>awk ‘样式’ 文件 ：把符合样式的数据显示出来</p>
+<p>awk {操作} 文件 ：对每一行都执行{}中的操作</p>
+<p>awk ‘样式 {操作}’ 文件：对符合样式的数据行，执行{}中的操作</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li><p>默认用空格或TAB分割 </p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$4&#125;&#x27; log.txt</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>格式化输出</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &#x27;&#123;print &quot;%-8s %-10s\n&quot;,$1,$4&#125;&#x27; log.txt</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>指定分割字符</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -F 字符串 &#x27;&#123;print ...&#125;&#x27; 文件</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>设置变量</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">awk -va=1 -vb=s &#x27;&#123;print $1,$1+a,$1b&#125;&#x27; log.txt</span><br><span class="line">---------------------------------------------</span><br><span class="line">输入</span><br><span class="line"> 2 3</span><br><span class="line"> 3 4</span><br><span class="line"> This&#x27;s 1</span><br><span class="line"> 10 11</span><br><span class="line">输出</span><br><span class="line"> 2 3 2s</span><br><span class="line"> 3 4 3s</span><br><span class="line"> This&#x27;s 1 This&#x27;ss</span><br><span class="line"> 10 11 10s</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h1 id="QUESTION"><a href="#QUESTION" class="headerlink" title="QUESTION"></a>QUESTION</h1><h2 id="1-获取文件总行数"><a href="#1-获取文件总行数" class="headerlink" title="1. 获取文件总行数"></a>1. 获取文件总行数</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat -n a.txt | tail -n 1 | awk &#x27;&#123;print$1&#125;&#x27;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="2-命令的返回值"><a href="#2-命令的返回值" class="headerlink" title="2. 命令的返回值"></a>2. 命令的返回值</h2><h4 id="用来获取上一个命令的退出状态，或者上一个函数的返回值。"><a href="#用来获取上一个命令的退出状态，或者上一个函数的返回值。" class="headerlink" title="$? 用来获取上一个命令的退出状态，或者上一个函数的返回值。"></a>$? 用来获取上一个命令的退出状态，或者上一个函数的返回值。</h4><p>比较两个文件，相同输出same，反之输出different</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">diff $file1 $file2 </span><br><span class="line">if[ $? == 0] then </span><br><span class="line">	echo &quot;same&quot;</span><br><span class="line">else	</span><br><span class="line">	encho &quot;different&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h3 id="返回值的用法"><a href="#返回值的用法" class="headerlink" title="返回值的用法"></a>返回值的用法</h3></li>
+</ul>
+<p>在 Linux 下，不管你是启动一个桌面程序也好，还是在控制台下运行命令，所有的程序在结束时，都会返回一个数字值，这个值叫做返回值，或者称为错误号 ( Error Number )。</p>
+<p>在控制台下，有一个特殊的环境变量 **$?**，保存着前一个程序的返回值。如果变量 $? 的值不为0，就表示上一个命令在执行的过程中出错了。</p>
+<p>那么如果返回的值不是 0，我们要怎么知道是那里出错了呢？ 大多数的程序出错都会给出提示，如果没有提示的话，可以用 <strong>perror</strong> 这个程序来查看错误的信息，比如返回值是 2，我们可以运行：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">perror 2</span></span><br><span class="line">OS error code   2:  No such file or directory</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h3 id="参数的用法"><a href="#参数的用法" class="headerlink" title="参数的用法"></a>参数的用法</h3><ul>
+<li>$0 命令本身</li>
+<li>$1 第一个参数</li>
+<li>$# 参数的个数</li>
+<li>$@ 参数列表（不包括命令本身）</li>
+<li>$* ：和$@相同，但”$<em>“ 和 “$@”(加引号)并不同，”$</em>“将所有的参数解释成一个字符串，而”$@”是一个参数数组。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ x<span class="variable">$1</span> != x ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...有参数</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...没有参数</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></div>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：lab0上机总结</li>
+        <li>Post author：CrystalSim</li>
+        <li>Create time：2023-03-07 00:13:05</li>
+        <li>
+            Post link：https://crystalsim.github.io/2023/03/07/myFirstBlog/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/03/17/BUAA-OO-Unit1/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item"></span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/02/25/hello-world/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Hello World</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">lab0上机总结</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lab0%E4%B8%8A%E6%9C%BA%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">lab0上机总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#chmod"><span class="nav-number">1.1.</span> <span class="nav-text">chmod</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#change-mode"><span class="nav-number">1.1.1.</span> <span class="nav-text">change mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mode-ugoa%E2%80%A6-x3D-rwxX-%E2%80%A6-%E2%80%A6"><span class="nav-number">1.1.2.</span> <span class="nav-text">mode : [ugoa…] [ [+-&#x3D;] [rwxX]…] [,…]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tail"><span class="nav-number">1.2.</span> <span class="nav-text">tail</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diff"><span class="nav-number">1.3.</span> <span class="nav-text">diff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk"><span class="nav-number">1.4.</span> <span class="nav-text">awk</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QUESTION"><span class="nav-number">2.</span> <span class="nav-text">QUESTION</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%80%BB%E8%A1%8C%E6%95%B0"><span class="nav-number">2.1.</span> <span class="nav-text">1. 获取文件总行数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%91%BD%E4%BB%A4%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">2.2.</span> <span class="nav-text">2. 命令的返回值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%9D%A5%E8%8E%B7%E5%8F%96%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4%E7%9A%84%E9%80%80%E5%87%BA%E7%8A%B6%E6%80%81%EF%BC%8C%E6%88%96%E8%80%85%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%E3%80%82"><span class="nav-number">2.2.0.1.</span> <span class="nav-text">$? 用来获取上一个命令的退出状态，或者上一个函数的返回值。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E7%94%A8%E6%B3%95"><span class="nav-number">2.2.1.</span> <span class="nav-text">返回值的用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95"><span class="nav-number">2.2.2.</span> <span class="nav-text">参数的用法</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CrystalSim</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br> 
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.1.3</a>
+        </div>
+        
+        
+        
+            <div id="start_time_div" style="display:none">
+                2023/2/25 23:22:00
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="unfolded-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="folded-tools-list">
+        <li class="right-bottom-tools tool-toggle-show flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/utils.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/main.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/menu-shrink.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/go-top-bottom.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/dark-light-toggle.js"></script>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/local-search.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/code-block.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/runtime.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/assets/odometer-theme-minimal.css">
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/toc-toggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/plugins/tabs.js"></script>
+    
+    
+</div>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
