@@ -9,13 +9,13 @@
 <li><strong>度量类的属性个数、方法个数、每个方法规模、每个方法的控制分支数目、类总代码规模</strong>，<strong>计算经典的OO度量</strong></li>
 </ul>
 <p>首先看下图的复杂度分析，<code>MyComparator</code>类、<code>Parser</code>类和<code>Definer</code>类的复杂度都很高</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit1/%E7%B1%BB%E7%9A%84OO%E5%BA%A6%E9%87%8F.png" alt="类的OO度量"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit1/pic_oo_unit1/%E7%B1%BB%E7%9A%84OO%E5%BA%A6%E9%87%8F.png" alt="类的OO度量"></p>
 <p>下面贴上<code>Parser</code>类方法的复杂度图</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit1/Parser%E5%86%85%E9%83%A8%E6%96%B9%E6%B3%95%E7%9A%84%E5%BA%A6%E9%87%8F.png" alt="Parser内部方法的度量"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit1/pic_oo_unit1/Parser%E5%86%85%E9%83%A8%E6%96%B9%E6%B3%95%E7%9A%84%E5%BA%A6%E9%87%8F.png" alt="Parser内部方法的度量"></p>
 <p>可以发现<code>parseFactor()</code>方法除了基本复杂度，其他指标都很高，它负责的工作很多，写的时候思路并没有那么清晰，需要结合注释理解才能看懂，增加了debug工作的难度。</p>
 <h3 id="代码的UML类图"><a href="#代码的UML类图" class="headerlink" title="代码的UML类图"></a>代码的UML类图</h3><p>第一单元作业代码的<code>UML</code>类图如下所示</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit1/test.png" alt="UML1"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit1/Unit1UML.png" alt="test"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit1/pic_oo_unit1/test.png" alt="UML1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit1/pic_oo_unit1/Unit1UML.png" alt="test"></p>
 <p><strong>分析类的内聚和相互间的耦合情况以及优缺点</strong></p>
 <ul>
 <li><p>各个类的设计考虑：</p>
@@ -295,11 +295,11 @@
 <h1 id="代码的UML图"><a href="#代码的UML图" class="headerlink" title="代码的UML图"></a>代码的UML图</h1><ul>
 <li>UML类图</li>
 </ul>
-<p>​	<img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit2/homework7_UML.png" alt="homework7_UML"></p>
+<p>​	<img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit2/pic_oo_unit2/homework7_UML.png" alt="homework7_UML"></p>
 <ul>
 <li>时序图</li>
 </ul>
-<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit2/UML%E6%97%B6%E5%BA%8F%E5%9B%BE.png" alt="UML时序图"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit2/pic_oo_unit2/UML%E6%97%B6%E5%BA%8F%E5%9B%BE.png" alt="UML时序图"></p>
 <h1 id="同步块设置即锁的选择"><a href="#同步块设置即锁的选择" class="headerlink" title="同步块设置即锁的选择"></a>同步块设置即锁的选择</h1><ul>
 <li><p>本单元作业都采用<code>synchronized</code>锁</p>
 </li>
@@ -610,9 +610,81 @@
       </tags>
   </entry>
   <entry>
-    <title>BUAA-OO-Unit4</title>
+    <title>BUAA-OO-Unit4总结</title>
     <url>/2023/06/22/BUAA-OO-Unit4/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<ul>
+<li>总结本单元所实践的正向建模与开发</li>
+<li>总结本单元作业的架构设计，并对比分析最终的代码设计和UML模型设计之间的追踪关系</li>
+<li>总结自己在四个单元中架构设计思维的演进</li>
+<li>总结自己在四个单元中测试思维的演进</li>
+<li>总结自己的课程收获</li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本单元将以一个图书馆模拟系统为例，锻炼同学们<strong>对程序架构的设计和抽象能力，以及加强对 UML 图的绘制训练</strong>，需要掌握 UML 图的相关知识，以及 StarUML 的使用方法。</p>
+<h2 id="正向建模与开发"><a href="#正向建模与开发" class="headerlink" title="正向建模与开发"></a>正向建模与开发</h2><ul>
+<li><p>正向建模指的是从需求分析出发，按照一定的规则和流程，将需求转换为软件的结构和功能，最终生成可执行的代码。在正向建模中，通常会使用一些建模工具和编程语言，如UML、Java等。正向建模是一种自上而下的开发方式，从高层次的抽象开始，逐步细化，直到生成可执行的代码。正向建模是软件开发的常规方式，是保证软件质量和可维护性的基础。</p>
+</li>
+<li><p>对于本单元作业，正向建模与开发的思想体现在首先根据图书馆模型和相应需求构建与设计模型，并将设计通过UML类图、状态图和时序图表现出来，最后再根据设计实现代码。</p>
+</li>
+</ul>
+<h2 id="本单元架构设计"><a href="#本单元架构设计" class="headerlink" title="本单元架构设计"></a>本单元架构设计</h2><p>本单元三次作业主要设计并实验一个符合情景描述的图书馆模拟系统，同学们借阅图书需要遵守一定的规章制度。其中实现功能包括借书、还书、损毁书、修复书、查询书以及各学校图书馆之间的借还书等等。</p>
+<p>本单元主要任务包括设计程序架构和绘制UML图。</p>
+<h3 id="设计架构"><a href="#设计架构" class="headerlink" title="设计架构"></a>设计架构</h3><p>主要实现了几种类，包括容器类、工具类、管理员类、图书馆类等</p>
+<ul>
+<li>容器类：<ul>
+<li>Book：记录每种图书的类型、书号、副本数、学校名、学号、是否可以外借等</li>
+<li>BookMessage：记录每条操作各信息，包括时间、学校名、学号、操作类型、书号及书的类型等</li>
+</ul>
+</li>
+<li>工具类：<ul>
+<li>MyCalendar：主要进行日期的计算、处理等</li>
+</ul>
+</li>
+<li>管理员类：<ul>
+<li>ArrangingLibrarian:实现整理管理员各功能</li>
+<li>BrLibrarian：实现借还管理员各功能</li>
+<li>LogisticsDivision：实现后勤处各功能</li>
+<li>OrderingLibrarian：实现预定管理员各功能</li>
+<li>SelfService：实现自助机器各功能</li>
+<li>ManagementDivision：实现图书馆里处各功能</li>
+</ul>
+</li>
+<li>图书馆类：<ul>
+<li>Library：实现一个图书馆各功能，其中成员包含学校名、书架的书籍信息、学生的借书记录、学生损毁书记录、以及各管理员的实例</li>
+<li>SchoolLibraryManage：对所有学校的图书馆进行统一管理</li>
+</ul>
+</li>
+</ul>
+<h3 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h3><p>类图是面向对象系统建模中最常用和最重要的图，是定义其它图的基础。类图主要是用来显示系统中的类、接口以及它们之间的静态结构和关系的一种静态模型。类图中最基本的元素是类、接口。软件设计师设计出类图后，程序员就可以用代码实现类图中包含的内容。</p>
+<p>本单元总体架构实现后我的UML类图即为下图所示：</p>
+<p><img lazyload src="/images/loading.svg" data-src="D:\important\2023Spring\OO\OOUnit4\uml2.png"></p>
+<h3 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a>状态图</h3><p>状态图是系统分析的一种常用工具，它通过建立类对象的生存周期模型来描述对象随时间变化的动态行为。</p>
+<p>一个状态图表示一个状态机，主要用于表现从一个状态到另一个状态的控制流。它不仅可以展现一个对象拥有的状态，还可以说明事件（如消息的接收、错误、条件变更等）如何随着时间的推移来影响这些状态。</p>
+<p>状态图用于对系统的动态方面建模，动态方面指出现在系统结构中任一对象按事件排序的行为，其中这些对象可以是类、接口、构件和节点。</p>
+<p><img lazyload src="/images/loading.svg" data-src="D:\important\2023Spring\OO\OOUnit4\state.png"></p>
+<h3 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h3><p>时序图(Sequence Diagram)，又名序列图、循序图，是一种UML交互图。它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。</p>
+<p><img lazyload src="/images/loading.svg" data-src="D:\important\2023Spring\OO\OOUnit4\1.png"></p>
+<h2 id="四个单元架构设计思维的演进及感想"><a href="#四个单元架构设计思维的演进及感想" class="headerlink" title="四个单元架构设计思维的演进及感想"></a>四个单元架构设计思维的演进及感想</h2><h3 id="第一单元：表达式解析"><a href="#第一单元：表达式解析" class="headerlink" title="第一单元：表达式解析"></a>第一单元：表达式解析</h3><p>感觉这一单元真的是四个单元中最难的一单元（可能因为刚接触面向对象的思想）说起来就是前几周的日子在每周二晚上拿到题目，周三开始住在咖啡厅、教室写代码和debug中<strong>艰难</strong>地度过:crying_cat_face:</p>
+<p>本单元主要利用<strong>递归下降</strong>的思想对表达式进行解析、化简，也初次接触了层次化管理的思想。</p>
+<p>经过这一单元的学习，我对面向对象的思想和方法有了一个全新的认识，也意识到了代码架构的重要性。因为第一单元我在思路不太清晰的情况下就直接开始敲代码，导致代码很冗长、架构不够漂亮、方法也很繁琐，可读性也很差，所以以后几单元中下意识开始注意自己的架构问题。</p>
+<h3 id="第二单元：电梯调度"><a href="#第二单元：电梯调度" class="headerlink" title="第二单元：电梯调度"></a>第二单元：电梯调度</h3><p>第二单元实现模拟了多线程实时电梯系统，在这一单元我第一次接触并实现了多线程的程序，学习了很多新的知识和概念，比如线程的概念、各种锁、信号量、LOOK策略、自由竞争、调度器、轮询等等。</p>
+<p>在这一单元我对类的封装更加熟练了，代码风格较上一单元有所提升，也对多线程程序设计有了一个初步的接触，熟悉了一些设计模型，如生产者-消费者模型、单例模式等等。</p>
+<h3 id="第三单元：JML规格设计"><a href="#第三单元：JML规格设计" class="headerlink" title="第三单元：JML规格设计"></a>第三单元：JML规格设计</h3><p>本单元主要考察大家对JML规格实现和算法能力(?)</p>
+<p>在本单元中我学习到了一些JML规格的知识，也认识并实现了一些图模型的算法，还有Oktest测试等内容，进一步熟悉了规格和设计分离的思路。在完成本单元作业时，我感觉JML较为难读，对于自己写的实现方法是否符合题目的性能要求也不是很清楚 :anguished: 也非常感谢讨论区同学们热心分享的优化算法！希望自己在今后的学习中，能够更加关注时间复杂度以及程序性能方面的提升。</p>
+<h3 id="第四单元：UML建模语言"><a href="#第四单元：UML建模语言" class="headerlink" title="第四单元：UML建模语言"></a>第四单元：UML建模语言</h3><p>本单元主要锻炼同学们<strong>对程序架构的设计和抽象能力，以及加强对 UML 图的绘制训练</strong>。</p>
+<p>在本单元中我进一步认识并学习了UML类图、时序图、状态图等相关知识，提高了自己理解题目的能力，也深刻意识到了设计构思的重要性。</p>
+<h2 id="四个单元测试思维的演进"><a href="#四个单元测试思维的演进" class="headerlink" title="四个单元测试思维的演进"></a>四个单元测试思维的演进</h2><ul>
+<li>Unit1自己的测试思维真的很弱，常常是过了中测就觉得万事大吉了:cry: 也因此出了很多bug，现在想想，如果当时自己有意识多测测应该也不会出这么多bug…</li>
+<li>后来的单元自己就有意识地找同学对拍、用评测机进行测试，自己也有意识地构造容易错的测试点进行测试，降低了强测出bug的概率</li>
+<li>后来随着逐渐深入地学习了解到了如黑盒测试、白盒测试、单元测试、自动化测试等多种测试方法</li>
+<li>测试真的很重要，以后要多注重测试方面</li>
+</ul>
+<h2 id="课程收获"><a href="#课程收获" class="headerlink" title="课程收获"></a>课程收获</h2><p><strong>OO课程完结撒花</strong>   :cherry_blossom: :cherry_blossom: :cherry_blossom: :cherry_blossom: :cherry_blossom: ✿ヽ(°▽°)✿ :cherry_blossom: :cherry_blossom: :cherry_blossom: :cherry_blossom: :cherry_blossom:</p>
+<p>虽然一开始前几次作业感觉真的完成地很艰难，但是最后也都成功实现啦:happy:</p>
+<p>而且经过一学期的学习，感觉自己的编程水平得到了进一步提高，从刚开始接触到逐渐熟悉面向对象的思想，学到了很多新的东西。虽然其间真的面对了很多困难，很多次因为作业而头疼，但最终还是逐步攻克了难关:grin: 真的非常感觉这一路走来给予过我帮助的老师、助教和同学们！:sob: </p>
+]]></content>
+      <tags>
+        <tag>OO</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
