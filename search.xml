@@ -256,7 +256,7 @@
       </tags>
   </entry>
   <entry>
-    <title>BUAA-OO-Unit2</title>
+    <title>BUAA-OO-Unit2总结</title>
     <url>/2023/06/22/BUAA-OO-Unit2/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本单元基本目标是模拟<strong>多线程实时电梯系统</strong>，来熟悉线程的创建、运行，熟悉多线程程序的设计方法。</p>
 <p>该系统类似新主楼，初始六台电梯可以在1-11层之间运行。系统从输入中输入乘客的请求信息，程序进行模拟电梯运行时上下行、开关门和乘客的进出。</p>
@@ -447,32 +447,172 @@
       </tags>
   </entry>
   <entry>
-    <title>Begin a blog</title>
-    <url>/2023/06/22/Begin-a-blog/</url>
-    <content><![CDATA[<h1 id="update-blog"><a href="#update-blog" class="headerlink" title="update blog"></a>update blog</h1><ul>
-<li><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>使用 Github 作为图床在博文中插入图片</p>
-<ul>
-<li>在博客根目录下创建一个储存图片的文件夹<code>pictures</code>（或任何名字）</li>
-<li>把需要插入的图片保存到<code>pictures</code>文件夹里并push到github远程仓库</li>
-<li>在github仓库中打开图片，复制url（图片地址）</li>
-<li>将URL中blob替换为raw</li>
-<li>使用markdown插入图片的语法即可显示图片</li>
-</ul>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![test](https://github.com/CrystalSim/CrystalSim.github.io/blob/main/pic_oo_unit2/homework7_UML.png) </span><br></pre></td></tr></table></figure></div>
-
-
+    <title>BUAA-OO-Unit3总结</title>
+    <url>/2023/06/22/BUAA-OO-Unit3/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本单元作业目标是实现简单的社交关系的模拟和查询、群组和消息功能及社交关系系统中不同消息类型以及相关操作，<strong>理解JML规格在面向对象设计与构造中的重要意义，并掌握利用JML规格提高代码质量的能力</strong>。</p>
+<h2 id="本单元补充知识"><a href="#本单元补充知识" class="headerlink" title="本单元补充知识"></a>本单元补充知识</h2><h3 id="JML规格"><a href="#JML规格" class="headerlink" title="JML规格"></a>JML规格</h3><ul>
+<li><p>前置条件requires ：requires子句定义方法的前置条件(precondition)。前置条件是对方法输入参数的限制，如果不满足前置条件，方法执行结果不可预测，或者说不保证方法执行结果的正确性。</p>
 </li>
-<li><h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3></li>
-</ul>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean  //清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">$ hexo g   //生成网站静态文件到默认设置的public文件夹</span><br><span class="line">$ hexo d   //部署网站到设定的仓库</span><br><span class="line">$ hexo new &quot;Hello Hexo&quot; 或 hexo n &quot;Hello Hexo&quot; 生成一个markdown文件骨架用于填写内容</span><br><span class="line"></span><br><span class="line">$ hexo generate 或 hexo g 写完博客后, 生成静态内容</span><br><span class="line">$ hexo server 或 hexo s 启动本地服务器可以先看一下效果</span><br><span class="line">$ hexo deploy 或 hexo d 发布到外网</span><br></pre></td></tr></table></figure></div>
-
+<li><p>后置条件ensures：对方法执行结果的限制，如果执行结果满足后置条件，则表示方法执行正确，否则执行错误。</p>
+</li>
+<li><p>副作用约定：副作用指方法在执行过程中对输入对象或 this 对象进行了修改（对其成员变量进行了赋值，或者调用其修改方法）</p>
 <ul>
-<li><h3 id="markdown文件头部-支持多标签"><a href="#markdown文件头部-支持多标签" class="headerlink" title="markdown文件头部, 支持多标签"></a>markdown文件头部, 支持多标签</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: Ubuntu下安装phpmyadmin</span><br><span class="line">date: 2015-07-17</span><br><span class="line">tags: [ubuntu, phpmyadmin]</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div></li>
+<li><p>modifiable语句：表示可修改；</p>
+</li>
+<li><p>assignable语句：表示可赋值；</p>
+<p>assignable列出这个方法能够修改的类成员属性，如果后接\nothing关键词表示这个方法不对任何成员属性进行修改，是一个pure方法。</p>
+</li>
 </ul>
+</li>
+<li><p>规格变量的申明：如果是在Interface中声明规格变量，则要求明确变量的类别</p>
+<ul>
+<li><p>实例变量</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//@public instance model non_null int []elements</span></span><br></pre></td></tr></table></figure></div>
+
+<p>（不声明则默认是实例型的规格变量）</p>
+</li>
+<li><p>静态变量</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//@public static model non_null int []elements</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+</ul>
+<p>​	</p>
+<h3 id="继承extends"><a href="#继承extends" class="headerlink" title="继承extends"></a>继承extends</h3><ul>
+<li>子类继承父类时继承父类所有成员和方法，子类只需编写额外的功能</li>
+</ul>
+<blockquote>
+<p>注意：子类自动获得了父类的所有字段，严禁定义与父类<strong>重名</strong>的字段！</p>
+</blockquote>
+<p>在Java中，没有明确写<code>extends</code>的类，编译器会自动加上<code>extends Object</code></p>
+<ul>
+<li><p>继承有个特点，就是子类<strong>无法访问</strong>父类的<code>private</code>字段或者<code>private</code>方法</p>
+</li>
+<li><p>将<code>private</code>改为<code>protected</code>可以使子类访问父类的字段</p>
+</li>
+</ul>
+<blockquote>
+<p><code>protected</code>关键字可以把字段和方法的<strong>访问权限控制在继承树内部</strong>，一个<code>protected</code>字段和方法可以被其子类，以及子类的子类所访问</p>
+</blockquote>
+<ul>
+<li>super关键字表示父类</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name, <span class="type">int</span> age, <span class="type">int</span> score)</span> &#123;</span><br><span class="line">       <span class="built_in">super</span>(name, age); <span class="comment">// 调用父类的构造方法Person(String, int)</span></span><br><span class="line">       <span class="built_in">this</span>.score = score;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>如果父类没有默认的构造方法，子类就必须显式调用<code>super()</code>并给出参数以便让编译器定位到父类的一个合适的构造方法。</p>
+<ul>
+<li><strong>子类不会继承任何父类的构造方法</strong></li>
+</ul>
+<h4 id="向上转型和向下转型"><a href="#向上转型和向下转型" class="headerlink" title="向上转型和向下转型"></a>向上转型和向下转型</h4><ol>
+<li><p>把一个<strong>子类</strong>类型安全地变为<strong>父类</strong>类型的赋值，被称为向上转型（upcasting），向上转型实际上是把一个子类型安全地变为更加抽象的父类型。</p>
+</li>
+<li><p>如果把一个父类类型强制转型为子类类型，就是向下转型（downcasting）</p>
+<ol>
+<li><p>避免向下转型出错，Java提供了<code>instanceof</code>操作符，可以先判断一个实例究竟是不是某种类型</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Person</span> <span class="variable">p</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line"><span class="keyword">if</span> (p <span class="keyword">instanceof</span> Student) &#123;</span><br><span class="line">    <span class="comment">// 只有判断成功才会向下转型:</span></span><br><span class="line">    <span class="type">Student</span> <span class="variable">s</span> <span class="operator">=</span> (Student) p; <span class="comment">// 一定会成功</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+</li>
+</ol>
+<h3 id="接口interface"><a href="#接口interface" class="headerlink" title="接口interface"></a>接口interface</h3><p>在抽象类中，抽象方法本质上是定义接口规范：即规定高层类的接口，从而保证所有子类都有相同的接口实现。如果一个抽象类没有字段，所有方法全部都是抽象方法，就可以把该抽象类改写为接口：<code>interface</code></p>
+<ul>
+<li>接口定义的所有方法默认都是<code>public abstract</code></li>
+<li>一个具体的<code>class</code>去实现一个<code>interface</code>时，需要使用<code>implements</code>关键字</li>
+<li>一个类可以实现多个<code>interface</code></li>
+<li><code>interface</code>是可以有静态字段的，并且静态字段必须为<code>final</code>类型</li>
+</ul>
+<h3 id="多态-Polymorphic"><a href="#多态-Polymorphic" class="headerlink" title="多态(Polymorphic)"></a>多态(Polymorphic)</h3><p>Java的实例方法调用是基于运行时的<strong>实际类型</strong>的动态调用，而<strong>非变量的声明类型</strong></p>
+<p>多态的特性是:运行期才能动态决定调用的子类方法。</p>
+<p>本次作业中实现的<code>MyMessage</code>类的构造方法中体现了多态这个思想。</p>
+<h2 id="图模型构建和维护策略"><a href="#图模型构建和维护策略" class="headerlink" title="图模型构建和维护策略"></a>图模型构建和维护策略</h2><p>本单元的图模型主要为NetWork中的人员关系网和人员关系的权重构成。</p>
+<h3 id="第九次作业"><a href="#第九次作业" class="headerlink" title="第九次作业"></a>第九次作业</h3><p>本次作业基于官方给出的社交网络整体框架，依据给出的JML表述实现<code>MyPerson</code>类和<code>MyNetWork</code>类以及各种异常类，实现相应的接口方法。本次作业中还针对<code>NetWork</code>类中的<code>query_triple_sum</code>方法书写OK测试。</p>
+<ul>
+<li><p>MyNetWork中并查集的构建</p>
+<ul>
+<li><p><code>isCircle</code>方法：将NetWork中的关系梳理成多个极大连通子集，每个子集中的成员都享有一个祖先，每次查询时只需要判断两个人是否有相同祖先即可。每次新添加成员相当于在网络中加入一个独立的子集，所以这时总子集个数加一；在每次给网络中两人添加关系时进行维护，取这两人的祖先进行判断，如果祖先不同，则将其中一个祖先的parent设为另一个祖先，相当于合并了这两个子集，同时总子集个数减一。</p>
+</li>
+<li><p><code>queryBlockSum</code>方法：每次只需返回网络中极大连通子图的个数即可。</p>
+</li>
+<li><p><code>query_triple_sum</code>方法：在每次给网络中两人添加关系时，遍历两人中其中一人的acquaintance，判断是否可以形成三角形，并记录三角形个数。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>本次作业的难点主要在于NetWork类中<code>isCircle</code>方法、<code>queryBlockSum</code>方法和<code>queryTripleSum</code>方法的实现上。一开始我并没有考虑复杂度的问题 :cry:直接用BFS实现<code>isCircle</code>方法，判断两个人是否相连。后来发现这样复杂度过大:no_entry:性能较差，且容易超时，于是最后参考讨论区改成了并查集的实现方法。</p>
+<h3 id="第十次作业"><a href="#第十次作业" class="headerlink" title="第十次作业"></a>第十次作业</h3><p>本次作业新增了Group和Message类以及一些新的异常类，对于NetWork类中一些方法也增加了一些新方法。在这次作业中新增了删除关系时有关图的维护。</p>
+<ul>
+<li><p>MyNetWork中并查集的重建</p>
+<ul>
+<li><p>由于在<code>modifyRelation</code>方法中可能会删除两人的关系，所以会涉及到并查集的重建。我采用的方法是在社交网络中设置脏位，初始值设为0。当删除了某两人的边时，将脏位置1，当调用需要使用并查集的方法时（isCircle、queryBlockSum），判断脏位是否为1，如果为1就重建整个并查集，并再次将脏位置0。</p>
+</li>
+<li><p>对于需要计算三角形个数的<code>query_triple_sum</code>方法，可以将计算出的所有的三角形用集合记录下来，每次删除边时，判断这条边是否在已经记录的三角形集合的某个三角形中，如果是则删除该三角形。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第十一次作业"><a href="#第十一次作业" class="headerlink" title="第十一次作业"></a>第十一次作业</h3><p>本次作业新增了<code>RedEnvelopeMessage</code>类，<code>NoticeMessage</code>类，<code>EmojiMessage</code>类以及一些异常类。在这次作业中新增了网络关系中最小环的计算。</p>
+<ul>
+<li><p>MyNetWork中<code>queryLeastMoments</code>方法要求计算出通过pid的最小环并返回该环的长度</p>
+<p>我参考了讨论区的方法用修改后的dijkstra方法实现了最小环的计算，具体步骤如下：</p>
+<ul>
+<li>初始化vis数组（标记该点是否加入)，paths数组（记录该点到pid的最短路径长度、路径中第二个点和次短路径长度、路径中第二个点）</li>
+<li>每次取未加入且与pid权重最小的点v，将对应vis置1</li>
+<li>遍历v的acquaintance，用v的最短路径长度和次短路径长度分别更新其acquaintance的最短路径和次短路径</li>
+<li>最后遍历除pid之外所有成员，最小环长度就是最小的最短路径和次短路径之和</li>
+</ul>
+</li>
+</ul>
+<h2 id="OKTest"><a href="#OKTest" class="headerlink" title="OKTest"></a>OKTest</h2><p>在OKTest中，我们需要对JML的全部内容进行检查，除了检验requires和ensures，还有pure、assignable语句等等。例如，对于一个pure方法，调用方法前后的状态应该一致，如果前后状态不一致，那么我们认为这不符合给定的JML。所以OK测试可以检验代码实现与规格是否具有一致性。</p>
+<h2 id="测试过程"><a href="#测试过程" class="headerlink" title="测试过程"></a>测试过程</h2><ul>
+<li><p>对黑箱测试，白箱测试的理解</p>
+<ul>
+<li><p>黑箱测试：黑盒测试又称为功能测试，主要检测软件的每一个功能是否能够正常使用。在测试过程中，将程序看成不能打开的黑盒子，不考虑程序内部结构和特性的基础上通过程序接口进行测试，检查程序功能是否按照设计需求以及说明书的规定能够正常打开使用。</p>
+</li>
+<li><p>白箱测试：白盒测试也称为结构测试，主要用于检测软件编码过程中的错误。程序员的编程经验、对编程软件的掌握程度、工作状态等因素都会影响到编程质量，导致代码错误。</p>
+</li>
+</ul>
+</li>
+<li><p>对单元测试、功能测试、集成测试、压力测试、回归测试的理解</p>
+<ul>
+<li><p>单元测试：单元测试是完成最小的软件设计单元（模块）的验证工作，目标是确保模块被正确的编码，使用过程设计描述作为指南，对重要的控制路径进行测试以发现模块内的错误，通常情况下是白盒的，对代码风格和规则、程序设计和结构、业务逻辑等进行静态测试，及早的发现和解决不易显现的错误。</p>
+</li>
+<li><p>功能测试：功能测试（Functional Test）是在规定的一段时间内运行软件系统的所有功能，以验证这个软件系统有无严重错误。</p>
+</li>
+<li><p>集成测试：通过测试发现与模块接口有关的问题。目标是把通过了单元测试的模块拿来，构造一个在设计中所描述的程序结构，应当避免一次性的集成（除非软件规模很小），而采用增量集成。</p>
+</li>
+<li><p>压力测试：软件压力测试是一种基本的质量保证行为，它不是在常规条件下运行手动或自动测试，而是在计算机数量较少或系统资源匮乏的条件下运行测试。通常要进行软件压力测试的资源包括内部内存、CPU可用性、磁盘空间和网络带宽。压力测试涵盖，性能测试，负载测试，并发测试等等，这些测试点常常交织耦合在一起。</p>
+</li>
+<li><p>回归测试：当发现并修改缺陷后，或在软件中添加新的功能后，重新测试。用来检查被发现的缺陷是否被改正，并且所做的修改没有引发新的问题。回归测试可以通过人工重新执行测试用例，也可以使用自动化的工具来进行。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="BUG分析"><a href="#BUG分析" class="headerlink" title="BUG分析"></a>BUG分析</h2><ul>
+<li><p>对于第十次作业</p>
+<ul>
+<li><p>一开始没有注意Message的有序性，新的message应该添加到list的头部</p>
+</li>
+<li><p>想着<code>queryBestAcquaintance</code>方法计算bestId的时候复杂度只有O(n)，就没有设置缓存维护每个成员的bestId，导致强测有一个点ctle:sob:  </p>
+<p>后来发现在<code>queryCoupleSum</code>方法中调用了<code>queryBestAcquaintance</code>方法，而按照我之前无脑循环的计算方法，时间复杂度达到了O(n^3)，所以会超时。最后对于以上两个方法都添加缓存后，修复了这个bug</p>
+</li>
+</ul>
+</li>
+<li><p>对于第十一次作业</p>
+<ul>
+<li><p>没有对queryLeastMement方法进行过多地优化，仅仅用修改后的dijkstra方法实现，而没有加优先队列每次选出队中权重最短的未选过的点，导致strong9这个点ctle:cry:</p>
+<p>这一次又是之前知道这是一个优化方法，但是因为自己的惰性没有做更多的优化……只能说优化真的很重要。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="学习体会"><a href="#学习体会" class="headerlink" title="学习体会"></a>学习体会</h2><p>这一单元主要学习了JML的规格和OKtest测试，也进一步熟悉了规格和设计分离的思路。在完成本单元作业时，我感觉JML较为难读，对于自己写的实现方法是否符合题目的性能要求也不是很清楚 :anguished: 也非常感谢讨论区同学们热心分享的优化算法！希望自己在今后的学习中，能够更加关注时间复杂度以及程序性能方面的提升。</p>
 ]]></content>
       <tags>
-        <tag>begin</tag>
+        <tag>OO</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>BUAA-OO-Unit4</title>
+    <url>/2023/06/22/BUAA-OO-Unit4/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -634,5 +774,33 @@
 </ul>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ x<span class="variable">$1</span> != x ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...有参数</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...没有参数</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></div>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Begin a blog</title>
+    <url>/2023/06/22/Begin-a-blog/</url>
+    <content><![CDATA[<h1 id="update-blog"><a href="#update-blog" class="headerlink" title="update blog"></a>update blog</h1><ul>
+<li><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>使用 Github 作为图床在博文中插入图片</p>
+<ul>
+<li>在博客根目录下创建一个储存图片的文件夹<code>pictures</code>（或任何名字）</li>
+<li>把需要插入的图片保存到<code>pictures</code>文件夹里并push到github远程仓库</li>
+<li>在github仓库中打开图片，复制url（图片地址）</li>
+<li>将URL中blob替换为raw</li>
+<li>使用markdown插入图片的语法即可显示图片</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![test](https://github.com/CrystalSim/CrystalSim.github.io/blob/main/pic_oo_unit2/homework7_UML.png) </span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3></li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean  //清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">$ hexo g   //生成网站静态文件到默认设置的public文件夹</span><br><span class="line">$ hexo d   //部署网站到设定的仓库</span><br><span class="line">$ hexo new &quot;Hello Hexo&quot; 或 hexo n &quot;Hello Hexo&quot; 生成一个markdown文件骨架用于填写内容</span><br><span class="line"></span><br><span class="line">$ hexo generate 或 hexo g 写完博客后, 生成静态内容</span><br><span class="line">$ hexo server 或 hexo s 启动本地服务器可以先看一下效果</span><br><span class="line">$ hexo deploy 或 hexo d 发布到外网</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h3 id="markdown文件头部-支持多标签"><a href="#markdown文件头部-支持多标签" class="headerlink" title="markdown文件头部, 支持多标签"></a>markdown文件头部, 支持多标签</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: Ubuntu下安装phpmyadmin</span><br><span class="line">date: 2015-07-17</span><br><span class="line">tags: [ubuntu, phpmyadmin]</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>begin</tag>
+      </tags>
   </entry>
 </search>

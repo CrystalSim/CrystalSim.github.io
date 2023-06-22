@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="CrystalSim">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/06/22/buaa-oo-unit3/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="BUAA-OO-Unit3总结">
+    <meta property="og:description" content="Hexo Theme Redefine">
+    <meta property="og:url" content="http://example.com2023/06/22/BUAA-OO-Unit3/">
+    <meta property="og:image" content="/images/redefine-logo.svg">
+    <meta property="og:site_name" content="CrystalSim&#39;s Blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BUAA-OO-Unit3总结">
+    <meta name="twitter:description" content="Hexo Theme Redefine">
+    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    
+    <title>
+        
+            BUAA-OO-Unit3总结 -
+        
+        CrystalSim&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/assets/fonts.css">
+    
+    
+    
+    
+        <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"https://evan.beee.top/img/wallhaven-wqery6-light.webp","dark":"https://evan.beee.top/img/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CrystalSim's Blog","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.1.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/fontawesome/regular.min.css">
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="menu-wrapper">
+    
+    <div class="menu-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                CrystalSim&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">BUAA-OO-Unit3总结</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">CrystalSim</span>
+                            
+                                <span class="author-label">lol</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-06-22 21:27:55</span>
+        <span class="mobile">2023-06-22 21:27</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="pc">2023-06-22 21:28:19</span>
+            <span class="mobile">2023-06-22 21:28</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/OO/">OO</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本单元作业目标是实现简单的社交关系的模拟和查询、群组和消息功能及社交关系系统中不同消息类型以及相关操作，<strong>理解JML规格在面向对象设计与构造中的重要意义，并掌握利用JML规格提高代码质量的能力</strong>。</p>
+<h2 id="本单元补充知识"><a href="#本单元补充知识" class="headerlink" title="本单元补充知识"></a>本单元补充知识</h2><h3 id="JML规格"><a href="#JML规格" class="headerlink" title="JML规格"></a>JML规格</h3><ul>
+<li><p>前置条件requires ：requires子句定义方法的前置条件(precondition)。前置条件是对方法输入参数的限制，如果不满足前置条件，方法执行结果不可预测，或者说不保证方法执行结果的正确性。</p>
+</li>
+<li><p>后置条件ensures：对方法执行结果的限制，如果执行结果满足后置条件，则表示方法执行正确，否则执行错误。</p>
+</li>
+<li><p>副作用约定：副作用指方法在执行过程中对输入对象或 this 对象进行了修改（对其成员变量进行了赋值，或者调用其修改方法）</p>
+<ul>
+<li><p>modifiable语句：表示可修改；</p>
+</li>
+<li><p>assignable语句：表示可赋值；</p>
+<p>assignable列出这个方法能够修改的类成员属性，如果后接\nothing关键词表示这个方法不对任何成员属性进行修改，是一个pure方法。</p>
+</li>
+</ul>
+</li>
+<li><p>规格变量的申明：如果是在Interface中声明规格变量，则要求明确变量的类别</p>
+<ul>
+<li><p>实例变量</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@public instance model non_null int []elements</span></span><br></pre></td></tr></table></figure></div>
+
+<p>（不声明则默认是实例型的规格变量）</p>
+</li>
+<li><p>静态变量</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@public static model non_null int []elements</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+</ul>
+<p>​	</p>
+<h3 id="继承extends"><a href="#继承extends" class="headerlink" title="继承extends"></a>继承extends</h3><ul>
+<li>子类继承父类时继承父类所有成员和方法，子类只需编写额外的功能</li>
+</ul>
+<blockquote>
+<p>注意：子类自动获得了父类的所有字段，严禁定义与父类<strong>重名</strong>的字段！</p>
+</blockquote>
+<p>在Java中，没有明确写<code>extends</code>的类，编译器会自动加上<code>extends Object</code></p>
+<ul>
+<li><p>继承有个特点，就是子类<strong>无法访问</strong>父类的<code>private</code>字段或者<code>private</code>方法</p>
+</li>
+<li><p>将<code>private</code>改为<code>protected</code>可以使子类访问父类的字段</p>
+</li>
+</ul>
+<blockquote>
+<p><code>protected</code>关键字可以把字段和方法的<strong>访问权限控制在继承树内部</strong>，一个<code>protected</code>字段和方法可以被其子类，以及子类的子类所访问</p>
+</blockquote>
+<ul>
+<li>super关键字表示父类</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name, <span class="type">int</span> age, <span class="type">int</span> score)</span> &#123;</span><br><span class="line">       <span class="built_in">super</span>(name, age); <span class="comment">// 调用父类的构造方法Person(String, int)</span></span><br><span class="line">       <span class="built_in">this</span>.score = score;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>如果父类没有默认的构造方法，子类就必须显式调用<code>super()</code>并给出参数以便让编译器定位到父类的一个合适的构造方法。</p>
+<ul>
+<li><strong>子类不会继承任何父类的构造方法</strong></li>
+</ul>
+<h4 id="向上转型和向下转型"><a href="#向上转型和向下转型" class="headerlink" title="向上转型和向下转型"></a>向上转型和向下转型</h4><ol>
+<li><p>把一个<strong>子类</strong>类型安全地变为<strong>父类</strong>类型的赋值，被称为向上转型（upcasting），向上转型实际上是把一个子类型安全地变为更加抽象的父类型。</p>
+</li>
+<li><p>如果把一个父类类型强制转型为子类类型，就是向下转型（downcasting）</p>
+<ol>
+<li><p>避免向下转型出错，Java提供了<code>instanceof</code>操作符，可以先判断一个实例究竟是不是某种类型</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Person</span> <span class="variable">p</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line"><span class="keyword">if</span> (p <span class="keyword">instanceof</span> Student) &#123;</span><br><span class="line">    <span class="comment">// 只有判断成功才会向下转型:</span></span><br><span class="line">    <span class="type">Student</span> <span class="variable">s</span> <span class="operator">=</span> (Student) p; <span class="comment">// 一定会成功</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+</li>
+</ol>
+<h3 id="接口interface"><a href="#接口interface" class="headerlink" title="接口interface"></a>接口interface</h3><p>在抽象类中，抽象方法本质上是定义接口规范：即规定高层类的接口，从而保证所有子类都有相同的接口实现。如果一个抽象类没有字段，所有方法全部都是抽象方法，就可以把该抽象类改写为接口：<code>interface</code></p>
+<ul>
+<li>接口定义的所有方法默认都是<code>public abstract</code></li>
+<li>一个具体的<code>class</code>去实现一个<code>interface</code>时，需要使用<code>implements</code>关键字</li>
+<li>一个类可以实现多个<code>interface</code></li>
+<li><code>interface</code>是可以有静态字段的，并且静态字段必须为<code>final</code>类型</li>
+</ul>
+<h3 id="多态-Polymorphic"><a href="#多态-Polymorphic" class="headerlink" title="多态(Polymorphic)"></a>多态(Polymorphic)</h3><p>Java的实例方法调用是基于运行时的<strong>实际类型</strong>的动态调用，而<strong>非变量的声明类型</strong></p>
+<p>多态的特性是:运行期才能动态决定调用的子类方法。</p>
+<p>本次作业中实现的<code>MyMessage</code>类的构造方法中体现了多态这个思想。</p>
+<h2 id="图模型构建和维护策略"><a href="#图模型构建和维护策略" class="headerlink" title="图模型构建和维护策略"></a>图模型构建和维护策略</h2><p>本单元的图模型主要为NetWork中的人员关系网和人员关系的权重构成。</p>
+<h3 id="第九次作业"><a href="#第九次作业" class="headerlink" title="第九次作业"></a>第九次作业</h3><p>本次作业基于官方给出的社交网络整体框架，依据给出的JML表述实现<code>MyPerson</code>类和<code>MyNetWork</code>类以及各种异常类，实现相应的接口方法。本次作业中还针对<code>NetWork</code>类中的<code>query_triple_sum</code>方法书写OK测试。</p>
+<ul>
+<li><p>MyNetWork中并查集的构建</p>
+<ul>
+<li><p><code>isCircle</code>方法：将NetWork中的关系梳理成多个极大连通子集，每个子集中的成员都享有一个祖先，每次查询时只需要判断两个人是否有相同祖先即可。每次新添加成员相当于在网络中加入一个独立的子集，所以这时总子集个数加一；在每次给网络中两人添加关系时进行维护，取这两人的祖先进行判断，如果祖先不同，则将其中一个祖先的parent设为另一个祖先，相当于合并了这两个子集，同时总子集个数减一。</p>
+</li>
+<li><p><code>queryBlockSum</code>方法：每次只需返回网络中极大连通子图的个数即可。</p>
+</li>
+<li><p><code>query_triple_sum</code>方法：在每次给网络中两人添加关系时，遍历两人中其中一人的acquaintance，判断是否可以形成三角形，并记录三角形个数。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>本次作业的难点主要在于NetWork类中<code>isCircle</code>方法、<code>queryBlockSum</code>方法和<code>queryTripleSum</code>方法的实现上。一开始我并没有考虑复杂度的问题 :cry:直接用BFS实现<code>isCircle</code>方法，判断两个人是否相连。后来发现这样复杂度过大:no_entry:性能较差，且容易超时，于是最后参考讨论区改成了并查集的实现方法。</p>
+<h3 id="第十次作业"><a href="#第十次作业" class="headerlink" title="第十次作业"></a>第十次作业</h3><p>本次作业新增了Group和Message类以及一些新的异常类，对于NetWork类中一些方法也增加了一些新方法。在这次作业中新增了删除关系时有关图的维护。</p>
+<ul>
+<li><p>MyNetWork中并查集的重建</p>
+<ul>
+<li><p>由于在<code>modifyRelation</code>方法中可能会删除两人的关系，所以会涉及到并查集的重建。我采用的方法是在社交网络中设置脏位，初始值设为0。当删除了某两人的边时，将脏位置1，当调用需要使用并查集的方法时（isCircle、queryBlockSum），判断脏位是否为1，如果为1就重建整个并查集，并再次将脏位置0。</p>
+</li>
+<li><p>对于需要计算三角形个数的<code>query_triple_sum</code>方法，可以将计算出的所有的三角形用集合记录下来，每次删除边时，判断这条边是否在已经记录的三角形集合的某个三角形中，如果是则删除该三角形。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第十一次作业"><a href="#第十一次作业" class="headerlink" title="第十一次作业"></a>第十一次作业</h3><p>本次作业新增了<code>RedEnvelopeMessage</code>类，<code>NoticeMessage</code>类，<code>EmojiMessage</code>类以及一些异常类。在这次作业中新增了网络关系中最小环的计算。</p>
+<ul>
+<li><p>MyNetWork中<code>queryLeastMoments</code>方法要求计算出通过pid的最小环并返回该环的长度</p>
+<p>我参考了讨论区的方法用修改后的dijkstra方法实现了最小环的计算，具体步骤如下：</p>
+<ul>
+<li>初始化vis数组（标记该点是否加入)，paths数组（记录该点到pid的最短路径长度、路径中第二个点和次短路径长度、路径中第二个点）</li>
+<li>每次取未加入且与pid权重最小的点v，将对应vis置1</li>
+<li>遍历v的acquaintance，用v的最短路径长度和次短路径长度分别更新其acquaintance的最短路径和次短路径</li>
+<li>最后遍历除pid之外所有成员，最小环长度就是最小的最短路径和次短路径之和</li>
+</ul>
+</li>
+</ul>
+<h2 id="OKTest"><a href="#OKTest" class="headerlink" title="OKTest"></a>OKTest</h2><p>在OKTest中，我们需要对JML的全部内容进行检查，除了检验requires和ensures，还有pure、assignable语句等等。例如，对于一个pure方法，调用方法前后的状态应该一致，如果前后状态不一致，那么我们认为这不符合给定的JML。所以OK测试可以检验代码实现与规格是否具有一致性。</p>
+<h2 id="测试过程"><a href="#测试过程" class="headerlink" title="测试过程"></a>测试过程</h2><ul>
+<li><p>对黑箱测试，白箱测试的理解</p>
+<ul>
+<li><p>黑箱测试：黑盒测试又称为功能测试，主要检测软件的每一个功能是否能够正常使用。在测试过程中，将程序看成不能打开的黑盒子，不考虑程序内部结构和特性的基础上通过程序接口进行测试，检查程序功能是否按照设计需求以及说明书的规定能够正常打开使用。</p>
+</li>
+<li><p>白箱测试：白盒测试也称为结构测试，主要用于检测软件编码过程中的错误。程序员的编程经验、对编程软件的掌握程度、工作状态等因素都会影响到编程质量，导致代码错误。</p>
+</li>
+</ul>
+</li>
+<li><p>对单元测试、功能测试、集成测试、压力测试、回归测试的理解</p>
+<ul>
+<li><p>单元测试：单元测试是完成最小的软件设计单元（模块）的验证工作，目标是确保模块被正确的编码，使用过程设计描述作为指南，对重要的控制路径进行测试以发现模块内的错误，通常情况下是白盒的，对代码风格和规则、程序设计和结构、业务逻辑等进行静态测试，及早的发现和解决不易显现的错误。</p>
+</li>
+<li><p>功能测试：功能测试（Functional Test）是在规定的一段时间内运行软件系统的所有功能，以验证这个软件系统有无严重错误。</p>
+</li>
+<li><p>集成测试：通过测试发现与模块接口有关的问题。目标是把通过了单元测试的模块拿来，构造一个在设计中所描述的程序结构，应当避免一次性的集成（除非软件规模很小），而采用增量集成。</p>
+</li>
+<li><p>压力测试：软件压力测试是一种基本的质量保证行为，它不是在常规条件下运行手动或自动测试，而是在计算机数量较少或系统资源匮乏的条件下运行测试。通常要进行软件压力测试的资源包括内部内存、CPU可用性、磁盘空间和网络带宽。压力测试涵盖，性能测试，负载测试，并发测试等等，这些测试点常常交织耦合在一起。</p>
+</li>
+<li><p>回归测试：当发现并修改缺陷后，或在软件中添加新的功能后，重新测试。用来检查被发现的缺陷是否被改正，并且所做的修改没有引发新的问题。回归测试可以通过人工重新执行测试用例，也可以使用自动化的工具来进行。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="BUG分析"><a href="#BUG分析" class="headerlink" title="BUG分析"></a>BUG分析</h2><ul>
+<li><p>对于第十次作业</p>
+<ul>
+<li><p>一开始没有注意Message的有序性，新的message应该添加到list的头部</p>
+</li>
+<li><p>想着<code>queryBestAcquaintance</code>方法计算bestId的时候复杂度只有O(n)，就没有设置缓存维护每个成员的bestId，导致强测有一个点ctle:sob:  </p>
+<p>后来发现在<code>queryCoupleSum</code>方法中调用了<code>queryBestAcquaintance</code>方法，而按照我之前无脑循环的计算方法，时间复杂度达到了O(n^3)，所以会超时。最后对于以上两个方法都添加缓存后，修复了这个bug</p>
+</li>
+</ul>
+</li>
+<li><p>对于第十一次作业</p>
+<ul>
+<li><p>没有对queryLeastMement方法进行过多地优化，仅仅用修改后的dijkstra方法实现，而没有加优先队列每次选出队中权重最短的未选过的点，导致strong9这个点ctle:cry:</p>
+<p>这一次又是之前知道这是一个优化方法，但是因为自己的惰性没有做更多的优化……只能说优化真的很重要。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="学习体会"><a href="#学习体会" class="headerlink" title="学习体会"></a>学习体会</h2><p>这一单元主要学习了JML的规格和OKtest测试，也进一步熟悉了规格和设计分离的思路。在完成本单元作业时，我感觉JML较为难读，对于自己写的实现方法是否符合题目的性能要求也不是很清楚 :anguished: 也非常感谢讨论区同学们热心分享的优化算法！希望自己在今后的学习中，能够更加关注时间复杂度以及程序性能方面的提升。</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：BUAA-OO-Unit3总结</li>
+        <li>Post author：CrystalSim</li>
+        <li>Create time：2023-06-22 21:27:55</li>
+        <li>
+            Post link：https://crystalsim.github.io/2023/06/22/BUAA-OO-Unit3/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/OO/">#OO</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/06/22/BUAA-OO-Unit4/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">BUAA-OO-Unit4</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/06/22/Begin-a-blog/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Begin a blog</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">BUAA-OO-Unit3总结</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%8D%95%E5%85%83%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">本单元补充知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JML%E8%A7%84%E6%A0%BC"><span class="nav-number">2.1.</span> <span class="nav-text">JML规格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BFextends"><span class="nav-number">2.2.</span> <span class="nav-text">继承extends</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E5%92%8C%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B"><span class="nav-number">2.2.1.</span> <span class="nav-text">向上转型和向下转型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3interface"><span class="nav-number">2.3.</span> <span class="nav-text">接口interface</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81-Polymorphic"><span class="nav-number">2.4.</span> <span class="nav-text">多态(Polymorphic)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E5%92%8C%E7%BB%B4%E6%8A%A4%E7%AD%96%E7%95%A5"><span class="nav-number">3.</span> <span class="nav-text">图模型构建和维护策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%BD%9C%E4%B8%9A"><span class="nav-number">3.1.</span> <span class="nav-text">第九次作业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E6%AC%A1%E4%BD%9C%E4%B8%9A"><span class="nav-number">3.2.</span> <span class="nav-text">第十次作业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A"><span class="nav-number">3.3.</span> <span class="nav-text">第十一次作业</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OKTest"><span class="nav-number">4.</span> <span class="nav-text">OKTest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E8%BF%87%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">测试过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUG%E5%88%86%E6%9E%90"><span class="nav-number">6.</span> <span class="nav-text">BUG分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E4%BD%93%E4%BC%9A"><span class="nav-number">7.</span> <span class="nav-text">学习体会</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CrystalSim</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br> 
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.1.3</a>
+        </div>
+        
+        
+        
+            <div id="start_time_div" style="display:none">
+                2023/2/25 23:22:00
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="unfolded-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="folded-tools-list">
+        <li class="right-bottom-tools tool-toggle-show flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/utils.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/main.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/menu-shrink.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/go-top-bottom.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/dark-light-toggle.js"></script>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/local-search.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/code-block.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/runtime.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/assets/odometer-theme-minimal.css">
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/tools/toc-toggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/plugins/tabs.js"></script>
+    
+    
+</div>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
