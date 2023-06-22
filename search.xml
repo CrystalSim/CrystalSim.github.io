@@ -418,8 +418,7 @@
     <title></title>
     <url>/2023/06/22/begin/</url>
     <content><![CDATA[<h1 id="update-blog"><a href="#update-blog" class="headerlink" title="update blog"></a>update blog</h1><ul>
-<li><p>插入图片</p>
-<p>使用 Github 作为图床在博文中插入图片</p>
+<li><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>使用 Github 作为图床在博文中插入图片</p>
 <ul>
 <li>在博客根目录下创建一个储存图片的文件夹<code>pictures</code>（或任何名字）</li>
 <li>把需要插入的图片保存到<code>pictures</code>文件夹里并push到github远程仓库</li>
@@ -431,9 +430,204 @@
 
 
 </li>
-<li><p>发布博客</p>
-</li>
+<li><h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3></li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean  //清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">$ hexo g   //生成网站静态文件到默认设置的public文件夹</span><br><span class="line">$ hexo d   //部署网站到设定的仓库</span><br><span class="line">$ hexo new &quot;Hello Hexo&quot; 或 hexo n &quot;Hello Hexo&quot; 生成一个markdown文件骨架用于填写内容</span><br><span class="line"></span><br><span class="line">$ hexo generate 或 hexo g 写完博客后, 生成静态内容</span><br><span class="line">$ hexo server 或 hexo s 启动本地服务器可以先看一下效果</span><br><span class="line">$ hexo deploy 或 hexo d 发布到外网</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h3 id="markdown文件头部-支持多标签"><a href="#markdown文件头部-支持多标签" class="headerlink" title="markdown文件头部, 支持多标签"></a>markdown文件头部, 支持多标签</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: Ubuntu下安装phpmyadmin</span><br><span class="line">date: 2015-07-17</span><br><span class="line">tags: [ubuntu, phpmyadmin]</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>BUAA-OO-Unit2</title>
+    <url>/2023/06/22/BUAA-OO-Unit2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本单元基本目标是模拟<strong>多线程实时电梯系统</strong>，来熟悉线程的创建、运行，熟悉多线程程序的设计方法。</p>
+<p>该系统类似新主楼，初始六台电梯可以在1-11层之间运行。系统从输入中输入乘客的请求信息，程序进行模拟电梯运行时上下行、开关门和乘客的进出。</p>
+<h2 id="多线程共享对象"><a href="#多线程共享对象" class="headerlink" title="多线程共享对象"></a>多线程共享对象</h2><p>当多个线程同时运行时，线程的调度由操作系统决定，程序本身无法决定。因此，任何一个线程都有可能在任何指令处被操作系统暂停，然后在某个时间段后继续执行。</p>
+<p>如果多个线程同时读写共享变量，会出现<strong>数据不一致</strong>的问题，为了保证<strong>线程同步</strong>：</p>
+<ul>
+<li><p>对变量进行读取和写入时，结果要正确，必须保证是<strong>原子操作</strong>。原子操作是指不能被中断的一个或一系列操作</p>
+</li>
+<li><p>多线程模型下，要保证逻辑正确，对<strong>共享变量</strong>进行读写时，必须保证<strong>一组指令以原子方式执行</strong>：即某一个线程执行时，其他线程必须<strong>等待</strong></p>
+</li>
+</ul>
+<h2 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h2><p>保证一段代码的原子性就是通过<strong>加锁和解锁</strong>实现的，这种加锁和解锁之间的代码块我们称之为<strong>临界区</strong>，任何时候临界区最多只有<strong>一个线程</strong>能执行。Java程序使用<code>synchronized</code>关键字对一个对象进行加锁。</p>
+<ul>
+<li>用<code>synchronized</code>修饰方法可以把整个方法变为同步代码块，<code>synchronized</code>方法加锁对象是<code>this</code></li>
+<li>把<code>synchronized</code>逻辑封装起来，将一个类设计为允许多线程正确访问，我们就说这个类就是“线程安全”的（thread-safe）</li>
+</ul>
+<p>我在本次作业中利用<code>synchronized</code>关键字将<code>requestTable</code>类设计为线程安全类，当一个线程访问时，其他线程无法同时访问，进入等待状态。</p>
+<blockquote>
+<p><em><strong>ATTENTION</strong></em></p>
+<ul>
+<li>可重入锁 ：注意记录这是第几次获得锁</li>
+</ul>
+<p>JVM允许同一个线程重复获取同一个锁，这种能被同一个线程反复获取的锁，就叫做<strong>可重入锁</strong> (重复获取同一个锁 : 获取到锁以后继续获取同一个锁)</p>
+<ul>
+<li><p>在获取多个锁的时候，不同线程获取多个不同对象的锁可能导致死锁。为了避免死锁，线程<strong>获取锁的顺序要一致</strong></p>
+</li>
+<li><p>必须在加锁块中才能调用<code>wait()</code>方法。<code>wait()</code>方法调用时，会<strong><em>释放</em>线程获得的锁</strong>，<code>wait()</code>方法返回后，线程又会重新试图获得锁</p>
+</li>
+<li><p>同样的，必须在加锁块中才能调用<code>notify()</code>方法，调用后释放该锁，从而唤醒一个正在等待这个锁的线程，使得该等待线程从<code>wait()</code>方法返回</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="Semaphore信号量"><a href="#Semaphore信号量" class="headerlink" title="Semaphore信号量"></a>Semaphore信号量</h2><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Semaphore</span> <span class="variable">semaphore</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Semaphore</span>(<span class="number">10</span>,<span class="literal">true</span>);</span><br><span class="line">semaphore.acquire();</span><br><span class="line"><span class="comment">//do something here</span></span><br><span class="line">semaphore.release();</span><br></pre></td></tr></table></figure></div>
+
+<p>信号量维护了一个信号量许可集。线程可以通过调用 <strong>acquire()</strong> 来获取信号量的许可；当信号量中有可用的许可时，线程能获取该许可；否则线程必须<strong>等待</strong>，直到有可用的许可为止。 线程可以通过 <strong>release()</strong> 来释放它所持有的信号量许可。</p>
+<h1 id="代码的UML图"><a href="#代码的UML图" class="headerlink" title="代码的UML图"></a>代码的UML图</h1><ul>
+<li>UML类图</li>
+</ul>
+<p>​	<img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit2/homework7_UML.png" alt="homework7_UML"></p>
+<ul>
+<li>时序图</li>
+</ul>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/pic_oo_unit2/UML%E6%97%B6%E5%BA%8F%E5%9B%BE.png" alt="UML时序图"></p>
+<h1 id="同步块设置即锁的选择"><a href="#同步块设置即锁的选择" class="headerlink" title="同步块设置即锁的选择"></a>同步块设置即锁的选择</h1><ul>
+<li><p>本单元作业都采用<code>synchronized</code>锁</p>
+</li>
+<li><p>在前两次作业中设计了共享对象<code>requestTable</code>和<code>elevatorTable</code>分别管理请求队列和电梯系统中的电梯，同时保证这两个类的线程安全性，在涉及到多线程可同时读写的方法前加<code>synchronized</code>关键字，从而实现同步块的设计</p>
+</li>
+<li><p>其他加锁的地方仅有一处，即在判断电梯开门接人时，这时需要给<code>requestTable</code>对象加锁，以防其他线程改变<code>requestTable</code></p>
+</li>
+</ul>
+<h1 id="第五次作业分析"><a href="#第五次作业分析" class="headerlink" title="第五次作业分析"></a>第五次作业分析</h1><p>本次作业基于前言无额外要求，作业难点主要在熟悉多线程程序的设计、电梯系统的调度策略、电梯的捎带策略等。</p>
+<h2 id="代码架构分析"><a href="#代码架构分析" class="headerlink" title="代码架构分析"></a>代码架构分析</h2><h3 id="线程设计分析"><a href="#线程设计分析" class="headerlink" title="线程设计分析"></a>线程设计分析</h3><p>本次作业线程的设计使用<strong>生产者消费者模型</strong>，数据缓存区即<code>requestTable</code>类，所有的未完成请求都存在这里。</p>
+<p>我一共设计了两类线程：</p>
+<ul>
+<li><code>InputHandler</code>为输入线程，即生产者，每次产生请求并添加到共享的请求队列中</li>
+<li>Elevator为电梯线程，即消费者，每次从请求队列中拿取请求 （根据题目要求一共有六个电梯，所以设计了六个电梯线程）</li>
+</ul>
+<h3 id="电梯的捎带策略"><a href="#电梯的捎带策略" class="headerlink" title="电梯的捎带策略"></a>电梯的捎带策略</h3><p>本单元电梯捎带策略均采用<strong>LOOK策略</strong>，将该策略单独设置为一个类封装，供给电梯使用，架构清晰，方便以后调换策略（虽然后来并没有换OmO）</p>
+<ol>
+<li><p>首先判断现在是否有人上电梯或下电梯，如果有，电梯开门</p>
+</li>
+<li><p>否则（现在没有人上下电梯），如果电梯里有人，就按当前方向运行</p>
+</li>
+<li><p>否则（电梯里没有人且现在没有人上下电梯）</p>
+<ul>
+<li><p>如果请求队列里没有人，结合输入是否结束判断电梯是否应该结束，若不应该则等待</p>
+</li>
+<li><p>如果请求队列有人，判断当前方向是否有未添加请求，若有则电梯朝原方向前进，反之电梯翻转方向</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Strategy</span> &#123;</span><br><span class="line">    <span class="comment">//实现策略</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> RequestTable requestTable;</span><br><span class="line">    <span class="comment">//电梯的请求表</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//根据当前电梯状态和requestTable获取电梯运行建议</span></span><br><span class="line">    <span class="keyword">public</span> Advice <span class="title function_">getAdvice</span><span class="params">()</span> &#123;</span><br><span class="line">    	......</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//判断在当前层是否有人可以上电梯</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">ableComeIn</span><span class="params">()</span> &#123;</span><br><span class="line">    	......</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//判断在当前层是否有人出电梯</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">ableComeOut</span><span class="params">()</span> &#123;</span><br><span class="line">    	......</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//检测当前前进方向的楼层，有没有需要被添加的需求</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">containCurDirection</span><span class="params">()</span> &#123;</span><br><span class="line">    	......</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="注意细节"><a href="#注意细节" class="headerlink" title="注意细节"></a>注意细节</h2><ul>
+<li><p>注意加锁逻辑，不要造成<strong>死锁</strong></p>
+</li>
+<li><p>注意判断是否<strong>轮询</strong></p>
+</li>
+<li><p>线程协调运行的原则就是：当条件不满足时，线程进入等待状态；当条件满足时，线程被唤醒，继续执行任务</p>
+<ul>
+<li>wait：调用wait()方法后，线程进入等待状态，wait()方法不会返回，直到将来某个时刻，线程从等待状态被其他线程唤醒后，wait()方法才会返回，然后，继续执行下一条语句</li>
+<li>notify：让等待的线程被重新唤醒，然后从<code>wait()</code>方法返回</li>
+</ul>
+</li>
+</ul>
+<h2 id="BUG分析"><a href="#BUG分析" class="headerlink" title="BUG分析"></a>BUG分析</h2><p>第一次交中测时cpu超时，第二次交real_time超时……第三次RTLE交替出现SOS</p>
+<ul>
+<li><p>CPU_TIME超时：</p>
+<ul>
+<li>极可能是因为<strong>轮询</strong>造成（对于轮询，可以在run方法中加一些输出来判断此时线程是否<strong>wait失败</strong>）</li>
+<li>某个<strong>线程没有结束</strong>，这时可以查看自己的输入线程是否<code>close</code>、电梯线程结束条件是否正确（我是因为电梯线程判断结束条件出了一点小bug）</li>
+</ul>
+</li>
+<li><p>REAL_TIME超时：</p>
+<ul>
+<li>程序中存在<strong>死锁</strong>（在可以改变wait判断条件的地方加<code>notifyAll</code>）</li>
+<li>程序中存在死循环</li>
+</ul>
+</li>
+</ul>
+<h1 id="第六次作业分析"><a href="#第六次作业分析" class="headerlink" title="第六次作业分析"></a>第六次作业分析</h1><p>第六次作业在第五次作业的基础上，添加了模拟电梯系统<strong>扩建</strong>和日常<strong>维护</strong>时乘客的调度功能。对于新扩建的电梯，注意其载客量和运行速度可能会和初始电梯不同。</p>
+<p>由于在本次作业中我仍然选择自由竞争的策略，所以调度方面没有太大的变化。</p>
+<h2 id="新增功能"><a href="#新增功能" class="headerlink" title="新增功能"></a>新增功能</h2><ul>
+<li>电梯系统的扩建</li>
+</ul>
+<p>对于新加电梯，考虑到方便统一管理电梯，我设计了一个类<code>elevatorTable</code>来存储所有电梯。其中，应特别注意这个类的<strong>线程安全问题</strong>，因为可能会有多个线程读写该共享电梯资源。</p>
+<ul>
+<li>日常维护<ul>
+<li>对于输入线程接受到的maintain指令，应及时传递给电梯，这时用<code>elevatorTable</code>统一管理电梯就非常方便了</li>
+<li>此时设置对应id的电梯的<strong>maintain位为1</strong>后，在电梯的<code>run</code>方法的while循环中判断，当maintain&#x3D;1则退出循环</li>
+<li>这样可以保证电梯在执行完当前advice后<strong>立即</strong>停下来，然后在退出循环后电梯再将未到达目的地的乘客重新加入请求列表，这时注意<strong>更新</strong>这些乘客的起始楼层为当前楼层</li>
+</ul>
+</li>
+</ul>
+<p>​	</p>
+<h2 id="注意细节-1"><a href="#注意细节-1" class="headerlink" title="注意细节"></a>注意细节</h2><ul>
+<li>注意判断电梯线程结束的条件。因为第五次作业中电梯线程结束当且仅当输入结束且请求队列为空时，但是在这次作业中当<strong>输入结束</strong>且<strong>请求队列为空</strong>时，仍可能有其他正在维修的电梯将乘客放出，所以电梯在此时不能结束</li>
+<li>我在这里再次判断此时<strong>电梯系统是否有维修电梯</strong>，如果有则电梯线程不能结束</li>
+<li>注意电梯应当在接受到maintain指令后尽可能快地维修</li>
+</ul>
+<h1 id="第七次作业分析"><a href="#第七次作业分析" class="headerlink" title="第七次作业分析"></a>第七次作业分析</h1><h2 id="调度器的选择"><a href="#调度器的选择" class="headerlink" title="调度器的选择"></a>调度器的选择</h2><blockquote>
+<p>由于第五次第六次作业都未设计调度器而采用自由竞争的策略，所以仅在第七次作业中对调度器给予分析 </p>
+</blockquote>
+<p>在这次作业中我终于写了调度器www</p>
+<ul>
+<li>设计一个schedule线程，将总请求队列中的请求按照一定的策略分配给各个电梯的请求表（具体策略请移步下一个主题bfs换乘）</li>
+<li>每次尝试从总表中取出一个请求，如果请求为空，则continue；反之将请求按策略加入分请求表</li>
+<li>schedule线程结束条件：当总请求表为空、输入结束且<strong>每一个乘客都到达目的地时</strong>（注意这里，由于换乘时乘客当前目的地可能并不是最终目的地，此时还需将该乘客重新放入总请求表进行再次分配路线）</li>
+</ul>
+<h2 id="BFS求电梯换乘路线"><a href="#BFS求电梯换乘路线" class="headerlink" title="BFS求电梯换乘路线"></a>BFS求电梯换乘路线</h2><p>这里设计了Node和Reachable两个类用来计算乘客从出发层到目的层的可达路线，取出该路线中<strong>第一个目的楼层</strong>，随机分配一辆电梯执行该请求</p>
+<ul>
+<li>Node类存储bfs结点</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> access;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//firstFloor和FirstId为对应找到的应搭乘电梯id和搭乘到多少层</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> firstFloor;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> firstId;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Node</span><span class="params">(<span class="type">int</span> id, <span class="type">int</span> access, <span class="type">int</span> first)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">        <span class="built_in">this</span>.access = access;</span><br><span class="line">        <span class="built_in">this</span>.firstFloor = first;</span><br><span class="line">    &#125;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<ul>
+<li>Reachable类用来分析一条可达的路线</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Reachable</span> &#123;</span><br><span class="line">    <span class="comment">//分析一条请求的乘坐路线</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> HashMap&lt;Integer, Integer&gt; accessTable = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">//对应id电梯-&gt; access 集合</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//start为当前楼层，end为目的楼层</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> Node <span class="title function_">workForPath</span><span class="params">(<span class="type">int</span> start, <span class="type">int</span> end)</span> &#123;</span><br><span class="line">     	ArrayList&lt;Node&gt; queue = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">     	<span class="comment">//queue用来存储当前队列中的结点</span></span><br><span class="line">        ArrayList&lt;Node&gt; direct = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    	<span class="comment">//direct用来存储可从start到end直达的电梯</span></span><br><span class="line">    	......</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>首先，对于<code>accessTable</code>中所有电梯，判断其是否能到达起始层，若可以则将其加入queue和direct</p>
+</li>
+<li><p>若direct非空，则任取一个电梯返回</p>
+</li>
+<li><p>否则，每次取queue的首个元素</p>
+<ul>
+<li>若其能到达终点，返回该结点</li>
+<li>若不能，遍历<code>accessTable</code>中其他结点，若该电梯与头元素有重合可达层，将其加入queue</li>
+</ul>
+</li>
+<li><p>最后，删除该头元素</p>
+</li>
+<li><p>判断队是否为空，若不为空则重复以上操作，反之退出循环</p>
+</li>
+</ul>
+<h2 id="信号量的使用"><a href="#信号量的使用" class="headerlink" title="信号量的使用"></a>信号量的使用</h2><p>对于控制每层的服务电梯和只接人电梯数量，我在电梯系统中设计了两个Semaphore类型的数组来控制。</p>
+<p>在初始化时，设置每层资源数量分别为4和2。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> ArrayList&lt;Semaphore&gt; services = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> ArrayList&lt;Semaphore&gt; onlyPick = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">ElevatorTable</span><span class="params">(Reachable reachable)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.reachable = reachable;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;i &lt;= <span class="number">11</span>;i++) &#123;</span><br><span class="line">            services.add(i - <span class="number">1</span>, <span class="keyword">new</span> <span class="title class_">Semaphore</span>(<span class="number">4</span>));</span><br><span class="line">            onlyPick.add(i - <span class="number">1</span>, <span class="keyword">new</span> <span class="title class_">Semaphore</span>(<span class="number">2</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="注意细节-2"><a href="#注意细节-2" class="headerlink" title="注意细节"></a>注意细节</h2><ul>
+<li>判断电梯线程和调度线程结束当且仅当<strong>所有乘客都到达最终的目的地</strong>，具体实现可以在总请求列表中设置一个<code>totalNumber</code>位，当输入线程增加请求时该<code>totalNumber</code>加1；在乘客下车时判断其下车地点是否是最终目的的，若不是则将该请求重新加入总请求列表，若是则<code>totalNumber</code>减一</li>
+</ul>
+<p>​		当**<code>totalNumber</code>为0<strong>且</strong>输入结束**时线程可以结束</p>
+<h2 id="BUG分析-1"><a href="#BUG分析-1" class="headerlink" title="BUG分析"></a>BUG分析</h2><ul>
+<li>这次出了一个新bug，是由于schedule类在计算得出换乘电梯到将请求加入这个电梯的请求表的间隙，因为没有加锁导致错误。所以还是要多考虑加锁的逻辑，避免线程不安全出现。</li>
+</ul>
+<h1 id="第二单元心得体会"><a href="#第二单元心得体会" class="headerlink" title="第二单元心得体会"></a>第二单元心得体会</h1><ul>
+<li>线程安全</li>
+</ul>
+<p>对于线程安全的设计，一开始对于加锁和释放锁的概念不清。后来随着不断学习多线程知识，总结锁的逻辑、wait和notify的用法，逐渐清晰了对线程安全的设计。</p>
+<ul>
+<li>层次化设计</li>
+</ul>
+<p>本单元的层次化设计大致体现在对类的封装和对象的引用上。比如，将电梯捎带策略strategy类封装成一个类放在电梯里，便于移植和更改；将advice单独建一个enum；建立一个电梯表类系统管理多个电梯等等。</p>
+<p>经过本单元的学习，我对多线程程序设计有了一个初步的接触，也熟悉了很多设计模型。相比于第一单元的多项式展开，第二单元的设计相比要精简不少，整个代码的架构和风格也比上一单元好了很多（可能因为第一单元写的太乱了），希望下一单元继续努力完成每次作业www。</p>
+]]></content>
+      <tags>
+        <tag>OO</tag>
+      </tags>
   </entry>
 </search>
