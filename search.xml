@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2023/03/17/BUAA-OO-Unit1/</url>
-    <content><![CDATA[<p>[TOC]</p>
-<h1 id="BUAA-OO-第一单元表达式展开"><a href="#BUAA-OO-第一单元表达式展开" class="headerlink" title="BUAA-OO 第一单元表达式展开"></a>BUAA-OO 第一单元表达式展开</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一单元主要通过对表达式结构进行建模，完成多变量多项式的括号展开，初步体会层次化设计思想。主要考察了Java基础语法和<strong>基本容器</strong>的使用，扩展BNF描述的形式化表述和<strong>正则表达式</strong>、<strong>递归下降</strong>等方法的使用。</p>
+    <title>BUAA-OO-Unit1总结</title>
+    <url>/2023/06/22/BUAA-OO-Unit1/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一单元主要通过对表达式结构进行建模，完成多变量多项式的括号展开，初步体会层次化设计思想。主要考察了Java基础语法和<strong>基本容器</strong>的使用，扩展BNF描述的形式化表述和<strong>正则表达式</strong>、<strong>递归下降</strong>等方法的使用。</p>
 <p>本单元一共有三次作业，第一次作业是多变量表达式的展开化简，第二次作业加入三角函数和自定义函数的形式，第三次作业加入求导因子dx，dy，dz，又新增了求导功能。这三次作业难度是层层递进的，经过近一个月，第一单元的学习终于临近结束，在本篇博客里，我将详细分析这三次作业的框架结构和注意事项，并分享我学习第一单元的心得体会。</p>
 <h2 id="基于度量来分析自己的程序结构"><a href="#基于度量来分析自己的程序结构" class="headerlink" title="基于度量来分析自己的程序结构"></a>基于度量来分析自己的程序结构</h2><h3 id="度量分析"><a href="#度量分析" class="headerlink" title="度量分析"></a>度量分析</h3><ul>
 <li><strong>度量类的属性个数、方法个数、每个方法规模、每个方法的控制分支数目、类总代码规模</strong>，<strong>计算经典的OO度量</strong></li>
@@ -252,192 +251,9 @@
 <h2 id="第一单元心得体会"><a href="#第一单元心得体会" class="headerlink" title="第一单元心得体会"></a>第一单元心得体会</h2><p>​		第一单元的学习在每周二晚上拿到题目，周三开始住在咖啡厅、教室写代码和debug中<strong>艰难</strong>地度过。感觉最为困难的是第一次作业，因为毕竟是一个从零开始的新作业，也是第一次接触到OO。</p>
 <p>​		经过这一单元的学习，我对递归下降有了一个全新的认识，也大概了解了面向对象的思想和方法。诚然，我对自己这几次作业是不太满意的，光从我的代码就可以看出来，思路并不清晰，架构没有那么漂亮，方法很繁琐，代码很冗长，这是一份可读性很差，bug又很多的代码。但是，从这三次作业中，我也收获了很多感悟，并下定决心（qwp）下一个单元在写代码之前一点要把架构想清楚，多使用层次化管理的方法，多简化自己的方法和代码，增加其可读性。而且，一定不要过了中测就沾沾自喜，不然就会有<strong>一堆bug</strong>在强测等着你(寄)，多分块测试自己代码的正确性。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/02/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link" href="https://hexo.io/">Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link" href="https://hexo.io/docs/">documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" href="https://hexo.io/docs/troubleshooting.html">troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/writing.html">Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/server.html">Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/generating.html">Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>lab0上机总结</title>
-    <url>/2023/03/07/myFirstBlog/</url>
-    <content><![CDATA[<h1 id="lab0上机总结"><a href="#lab0上机总结" class="headerlink" title="lab0上机总结"></a>lab0上机总结</h1><ul>
-<li><h2 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h2><blockquote>
-<h3 id="change-mode"><a href="#change-mode" class="headerlink" title="change mode"></a>change mode</h3><p> 文件调用权限：Owner、Group、Other Users</p>
-<p> chmod [-cfvR] [–help] [–version] mode file…</p>
-<ul>
-<li><h3 id="mode-ugoa…-x3D-rwxX-…-…"><a href="#mode-ugoa…-x3D-rwxX-…-…" class="headerlink" title="mode : [ugoa…] [ [+-&#x3D;] [rwxX]…] [,…]"></a>mode : [ugoa…] [ [+-&#x3D;] [rwxX]…] [,…]</h3></li>
-</ul>
-<ol>
-<li>u(user)表示该文件的拥有者，g(group)表示与该文件拥有者属于同一个group者，o(others)表示其他以外的人，a(all)表示这三者皆是</li>
-<li>+表示增加权限，-表示取消权限，&#x3D;表示唯一设定权限</li>
-<li>r表示可读取，w表示可写入，x表示可执行，X表示只有当该文件是个子目录或者该文件已经被设定过为可执行</li>
-<li>八进制语法：文件或目录的权限位是由9个权限位来控制，每三位为一组，它们分别是文件所有者（User）的读、写、执行，用户组（Group）的读、写、执行以及其它用户（Other）的读、写、执行。</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>权限</th>
-<th>rwx</th>
-<th>二进制</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>7</td>
-<td>读+写+执行</td>
-<td>rwx</td>
-<td>111</td>
-</tr>
-<tr>
-<td>6</td>
-<td>读+写</td>
-<td>rw-</td>
-<td>110</td>
-</tr>
-<tr>
-<td>5</td>
-<td>读+执行</td>
-<td>r-x</td>
-<td>101</td>
-</tr>
-<tr>
-<td>4</td>
-<td>只读</td>
-<td>r–</td>
-<td>100</td>
-</tr>
-<tr>
-<td>3</td>
-<td>写+执行</td>
-<td>-wx</td>
-<td>011</td>
-</tr>
-<tr>
-<td>2</td>
-<td>只写</td>
-<td>-w-</td>
-<td>010</td>
-</tr>
-<tr>
-<td>1</td>
-<td>只执行</td>
-<td>–x</td>
-<td>001</td>
-</tr>
-<tr>
-<td>0</td>
-<td>无</td>
-<td>—</td>
-<td>000</td>
-</tr>
-</tbody></table>
-<p>例如，765 ：u对应7，g对应6，o对应5</p>
-<ul>
-<li><h2 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h2><blockquote>
-<p>tail [参数] [文件]</p>
-<p>-f : 循环读取</p>
-<p>-q : 不显示处理信息</p>
-<p>-v : 显示详细的处理信息</p>
-<p>-c&lt;数目&gt; 显示的字节数</p>
-<p>-n&lt;行数&gt; 显示文件的尾部n行内容</p>
-<p>tail file 默认显示最后10行</p>
-<p>tail -n +10 表示从第十行到最后一行</p>
-</blockquote>
-</li>
-<li><h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><p>diff 以逐行的方式，比较文本文件的异同处。如果指定要比较目录，则 diff 会比较目录中相同文件名的文件，但不会比较其中子目录。</p>
-<blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">diff [-abBcdefHilnNpPqrstTuvwy][-&lt;行数&gt;][-C &lt;行数&gt;][-D &lt;巨集名称&gt;][-I &lt;字符或字符串&gt;][-S &lt;文件&gt;][-W &lt;宽度&gt;][-x &lt;文件或目录&gt;][-X &lt;文件&gt;][--help][--left-column][--suppress-common-line][文件或目录1][文件或目录2]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-</li>
-<li><h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><blockquote>
-<p>awk ‘样式’ 文件 ：把符合样式的数据显示出来</p>
-<p>awk {操作} 文件 ：对每一行都执行{}中的操作</p>
-<p>awk ‘样式 {操作}’ 文件：对符合样式的数据行，执行{}中的操作</p>
-</blockquote>
-</li>
-</ul>
-<ol>
-<li><p>默认用空格或TAB分割 </p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$4&#125;&#x27; log.txt</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>格式化输出</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print &quot;%-8s %-10s\n&quot;,$1,$4&#125;&#x27; log.txt</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>指定分割字符</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">awk -F 字符串 &#x27;&#123;print ...&#125;&#x27; 文件</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>设置变量</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk -va=1 -vb=s &#x27;&#123;print $1,$1+a,$1b&#125;&#x27; log.txt</span><br><span class="line">---------------------------------------------</span><br><span class="line">输入</span><br><span class="line"> 2 3</span><br><span class="line"> 3 4</span><br><span class="line"> This&#x27;s 1</span><br><span class="line"> 10 11</span><br><span class="line">输出</span><br><span class="line"> 2 3 2s</span><br><span class="line"> 3 4 3s</span><br><span class="line"> This&#x27;s 1 This&#x27;ss</span><br><span class="line"> 10 11 10s</span><br></pre></td></tr></table></figure></div></li>
-</ol>
-<h1 id="QUESTION"><a href="#QUESTION" class="headerlink" title="QUESTION"></a>QUESTION</h1><h2 id="1-获取文件总行数"><a href="#1-获取文件总行数" class="headerlink" title="1. 获取文件总行数"></a>1. 获取文件总行数</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">cat -n a.txt | tail -n 1 | awk &#x27;&#123;print$1&#125;&#x27;</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h2 id="2-命令的返回值"><a href="#2-命令的返回值" class="headerlink" title="2. 命令的返回值"></a>2. 命令的返回值</h2><h4 id="用来获取上一个命令的退出状态，或者上一个函数的返回值。"><a href="#用来获取上一个命令的退出状态，或者上一个函数的返回值。" class="headerlink" title="$? 用来获取上一个命令的退出状态，或者上一个函数的返回值。"></a>$? 用来获取上一个命令的退出状态，或者上一个函数的返回值。</h4><p>比较两个文件，相同输出same，反之输出different</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">diff $file1 $file2 </span><br><span class="line">if[ $? == 0] then </span><br><span class="line">	echo &quot;same&quot;</span><br><span class="line">else	</span><br><span class="line">	encho &quot;different&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li><h3 id="返回值的用法"><a href="#返回值的用法" class="headerlink" title="返回值的用法"></a>返回值的用法</h3></li>
-</ul>
-<p>在 Linux 下，不管你是启动一个桌面程序也好，还是在控制台下运行命令，所有的程序在结束时，都会返回一个数字值，这个值叫做返回值，或者称为错误号 ( Error Number )。</p>
-<p>在控制台下，有一个特殊的环境变量 **$?**，保存着前一个程序的返回值。如果变量 $? 的值不为0，就表示上一个命令在执行的过程中出错了。</p>
-<p>那么如果返回的值不是 0，我们要怎么知道是那里出错了呢？ 大多数的程序出错都会给出提示，如果没有提示的话，可以用 <strong>perror</strong> 这个程序来查看错误的信息，比如返回值是 2，我们可以运行：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">perror 2</span></span><br><span class="line">OS error code   2:  No such file or directory</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li><h3 id="参数的用法"><a href="#参数的用法" class="headerlink" title="参数的用法"></a>参数的用法</h3><ul>
-<li>$0 命令本身</li>
-<li>$1 第一个参数</li>
-<li>$# 参数的个数</li>
-<li>$@ 参数列表（不包括命令本身）</li>
-<li>$* ：和$@相同，但”$<em>“ 和 “$@”(加引号)并不同，”$</em>“将所有的参数解释成一个字符串，而”$@”是一个参数数组。</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ x<span class="variable">$1</span> != x ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...有参数</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...没有参数</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></div>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/06/22/begin/</url>
-    <content><![CDATA[<h1 id="update-blog"><a href="#update-blog" class="headerlink" title="update blog"></a>update blog</h1><ul>
-<li><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>使用 Github 作为图床在博文中插入图片</p>
-<ul>
-<li>在博客根目录下创建一个储存图片的文件夹<code>pictures</code>（或任何名字）</li>
-<li>把需要插入的图片保存到<code>pictures</code>文件夹里并push到github远程仓库</li>
-<li>在github仓库中打开图片，复制url，如 <a class="link" href="https://github.com/Yuleii/Yuleii.github.io/blob/master/pictures/test.PNG">https://github.com/Yuleii/Yuleii.github.io/blob/master/pictures/test.PNG <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>将URL中blob替换为raw，即 <a class="link" href="https://github.com/Yuleii/Yuleii.github.io/raw/master/pictures/test.PNG">https://github.com/Yuleii/Yuleii.github.io/raw/master/pictures/test.PNG <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>使用markdown插入图片的语法即可显示图片</li>
-</ul>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![test](https://github.com/Yuleii/Yuleii.github.io/raw/master/pictures/test.PNG) </span><br></pre></td></tr></table></figure></div>
-
-
-</li>
-<li><h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3></li>
-</ul>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean  //清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">$ hexo g   //生成网站静态文件到默认设置的public文件夹</span><br><span class="line">$ hexo d   //部署网站到设定的仓库</span><br><span class="line">$ hexo new &quot;Hello Hexo&quot; 或 hexo n &quot;Hello Hexo&quot; 生成一个markdown文件骨架用于填写内容</span><br><span class="line"></span><br><span class="line">$ hexo generate 或 hexo g 写完博客后, 生成静态内容</span><br><span class="line">$ hexo server 或 hexo s 启动本地服务器可以先看一下效果</span><br><span class="line">$ hexo deploy 或 hexo d 发布到外网</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li><h3 id="markdown文件头部-支持多标签"><a href="#markdown文件头部-支持多标签" class="headerlink" title="markdown文件头部, 支持多标签"></a>markdown文件头部, 支持多标签</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: Ubuntu下安装phpmyadmin</span><br><span class="line">date: 2015-07-17</span><br><span class="line">tags: [ubuntu, phpmyadmin]</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-]]></content>
+      <tags>
+        <tag>OO</tag>
+      </tags>
   </entry>
   <entry>
     <title>BUAA-OO-Unit2</title>
@@ -629,5 +445,194 @@
       <tags>
         <tag>OO</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Begin a blog</title>
+    <url>/2023/06/22/Begin-a-blog/</url>
+    <content><![CDATA[<h1 id="update-blog"><a href="#update-blog" class="headerlink" title="update blog"></a>update blog</h1><ul>
+<li><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>使用 Github 作为图床在博文中插入图片</p>
+<ul>
+<li>在博客根目录下创建一个储存图片的文件夹<code>pictures</code>（或任何名字）</li>
+<li>把需要插入的图片保存到<code>pictures</code>文件夹里并push到github远程仓库</li>
+<li>在github仓库中打开图片，复制url（图片地址）</li>
+<li>将URL中blob替换为raw</li>
+<li>使用markdown插入图片的语法即可显示图片</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![test](https://github.com/CrystalSim/CrystalSim.github.io/blob/main/pic_oo_unit2/homework7_UML.png) </span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3></li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean  //清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">$ hexo g   //生成网站静态文件到默认设置的public文件夹</span><br><span class="line">$ hexo d   //部署网站到设定的仓库</span><br><span class="line">$ hexo new &quot;Hello Hexo&quot; 或 hexo n &quot;Hello Hexo&quot; 生成一个markdown文件骨架用于填写内容</span><br><span class="line"></span><br><span class="line">$ hexo generate 或 hexo g 写完博客后, 生成静态内容</span><br><span class="line">$ hexo server 或 hexo s 启动本地服务器可以先看一下效果</span><br><span class="line">$ hexo deploy 或 hexo d 发布到外网</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h3 id="markdown文件头部-支持多标签"><a href="#markdown文件头部-支持多标签" class="headerlink" title="markdown文件头部, 支持多标签"></a>markdown文件头部, 支持多标签</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: Ubuntu下安装phpmyadmin</span><br><span class="line">date: 2015-07-17</span><br><span class="line">tags: [ubuntu, phpmyadmin]</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>begin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/02/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link" href="https://hexo.io/">Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link" href="https://hexo.io/docs/">documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" href="https://hexo.io/docs/troubleshooting.html">troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link" href="https://hexo.io/docs/writing.html">Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link" href="https://hexo.io/docs/server.html">Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link" href="https://hexo.io/docs/generating.html">Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>lab0上机总结</title>
+    <url>/2023/03/07/myFirstBlog/</url>
+    <content><![CDATA[<h1 id="lab0上机总结"><a href="#lab0上机总结" class="headerlink" title="lab0上机总结"></a>lab0上机总结</h1><ul>
+<li><h2 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h2><blockquote>
+<h3 id="change-mode"><a href="#change-mode" class="headerlink" title="change mode"></a>change mode</h3><p> 文件调用权限：Owner、Group、Other Users</p>
+<p> chmod [-cfvR] [–help] [–version] mode file…</p>
+<ul>
+<li><h3 id="mode-ugoa…-x3D-rwxX-…-…"><a href="#mode-ugoa…-x3D-rwxX-…-…" class="headerlink" title="mode : [ugoa…] [ [+-&#x3D;] [rwxX]…] [,…]"></a>mode : [ugoa…] [ [+-&#x3D;] [rwxX]…] [,…]</h3></li>
+</ul>
+<ol>
+<li>u(user)表示该文件的拥有者，g(group)表示与该文件拥有者属于同一个group者，o(others)表示其他以外的人，a(all)表示这三者皆是</li>
+<li>+表示增加权限，-表示取消权限，&#x3D;表示唯一设定权限</li>
+<li>r表示可读取，w表示可写入，x表示可执行，X表示只有当该文件是个子目录或者该文件已经被设定过为可执行</li>
+<li>八进制语法：文件或目录的权限位是由9个权限位来控制，每三位为一组，它们分别是文件所有者（User）的读、写、执行，用户组（Group）的读、写、执行以及其它用户（Other）的读、写、执行。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>权限</th>
+<th>rwx</th>
+<th>二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>读+写+执行</td>
+<td>rwx</td>
+<td>111</td>
+</tr>
+<tr>
+<td>6</td>
+<td>读+写</td>
+<td>rw-</td>
+<td>110</td>
+</tr>
+<tr>
+<td>5</td>
+<td>读+执行</td>
+<td>r-x</td>
+<td>101</td>
+</tr>
+<tr>
+<td>4</td>
+<td>只读</td>
+<td>r–</td>
+<td>100</td>
+</tr>
+<tr>
+<td>3</td>
+<td>写+执行</td>
+<td>-wx</td>
+<td>011</td>
+</tr>
+<tr>
+<td>2</td>
+<td>只写</td>
+<td>-w-</td>
+<td>010</td>
+</tr>
+<tr>
+<td>1</td>
+<td>只执行</td>
+<td>–x</td>
+<td>001</td>
+</tr>
+<tr>
+<td>0</td>
+<td>无</td>
+<td>—</td>
+<td>000</td>
+</tr>
+</tbody></table>
+<p>例如，765 ：u对应7，g对应6，o对应5</p>
+<ul>
+<li><h2 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h2><blockquote>
+<p>tail [参数] [文件]</p>
+<p>-f : 循环读取</p>
+<p>-q : 不显示处理信息</p>
+<p>-v : 显示详细的处理信息</p>
+<p>-c&lt;数目&gt; 显示的字节数</p>
+<p>-n&lt;行数&gt; 显示文件的尾部n行内容</p>
+<p>tail file 默认显示最后10行</p>
+<p>tail -n +10 表示从第十行到最后一行</p>
+</blockquote>
+</li>
+<li><h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><p>diff 以逐行的方式，比较文本文件的异同处。如果指定要比较目录，则 diff 会比较目录中相同文件名的文件，但不会比较其中子目录。</p>
+<blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">diff [-abBcdefHilnNpPqrstTuvwy][-&lt;行数&gt;][-C &lt;行数&gt;][-D &lt;巨集名称&gt;][-I &lt;字符或字符串&gt;][-S &lt;文件&gt;][-W &lt;宽度&gt;][-x &lt;文件或目录&gt;][-X &lt;文件&gt;][--help][--left-column][--suppress-common-line][文件或目录1][文件或目录2]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+</li>
+<li><h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><blockquote>
+<p>awk ‘样式’ 文件 ：把符合样式的数据显示出来</p>
+<p>awk {操作} 文件 ：对每一行都执行{}中的操作</p>
+<p>awk ‘样式 {操作}’ 文件：对符合样式的数据行，执行{}中的操作</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li><p>默认用空格或TAB分割 </p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$4&#125;&#x27; log.txt</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>格式化输出</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print &quot;%-8s %-10s\n&quot;,$1,$4&#125;&#x27; log.txt</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>指定分割字符</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">awk -F 字符串 &#x27;&#123;print ...&#125;&#x27; 文件</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>设置变量</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk -va=1 -vb=s &#x27;&#123;print $1,$1+a,$1b&#125;&#x27; log.txt</span><br><span class="line">---------------------------------------------</span><br><span class="line">输入</span><br><span class="line"> 2 3</span><br><span class="line"> 3 4</span><br><span class="line"> This&#x27;s 1</span><br><span class="line"> 10 11</span><br><span class="line">输出</span><br><span class="line"> 2 3 2s</span><br><span class="line"> 3 4 3s</span><br><span class="line"> This&#x27;s 1 This&#x27;ss</span><br><span class="line"> 10 11 10s</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h1 id="QUESTION"><a href="#QUESTION" class="headerlink" title="QUESTION"></a>QUESTION</h1><h2 id="1-获取文件总行数"><a href="#1-获取文件总行数" class="headerlink" title="1. 获取文件总行数"></a>1. 获取文件总行数</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">cat -n a.txt | tail -n 1 | awk &#x27;&#123;print$1&#125;&#x27;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="2-命令的返回值"><a href="#2-命令的返回值" class="headerlink" title="2. 命令的返回值"></a>2. 命令的返回值</h2><h4 id="用来获取上一个命令的退出状态，或者上一个函数的返回值。"><a href="#用来获取上一个命令的退出状态，或者上一个函数的返回值。" class="headerlink" title="$? 用来获取上一个命令的退出状态，或者上一个函数的返回值。"></a>$? 用来获取上一个命令的退出状态，或者上一个函数的返回值。</h4><p>比较两个文件，相同输出same，反之输出different</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">diff $file1 $file2 </span><br><span class="line">if[ $? == 0] then </span><br><span class="line">	echo &quot;same&quot;</span><br><span class="line">else	</span><br><span class="line">	encho &quot;different&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h3 id="返回值的用法"><a href="#返回值的用法" class="headerlink" title="返回值的用法"></a>返回值的用法</h3></li>
+</ul>
+<p>在 Linux 下，不管你是启动一个桌面程序也好，还是在控制台下运行命令，所有的程序在结束时，都会返回一个数字值，这个值叫做返回值，或者称为错误号 ( Error Number )。</p>
+<p>在控制台下，有一个特殊的环境变量 **$?**，保存着前一个程序的返回值。如果变量 $? 的值不为0，就表示上一个命令在执行的过程中出错了。</p>
+<p>那么如果返回的值不是 0，我们要怎么知道是那里出错了呢？ 大多数的程序出错都会给出提示，如果没有提示的话，可以用 <strong>perror</strong> 这个程序来查看错误的信息，比如返回值是 2，我们可以运行：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">perror 2</span></span><br><span class="line">OS error code   2:  No such file or directory</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h3 id="参数的用法"><a href="#参数的用法" class="headerlink" title="参数的用法"></a>参数的用法</h3><ul>
+<li>$0 命令本身</li>
+<li>$1 第一个参数</li>
+<li>$# 参数的个数</li>
+<li>$@ 参数列表（不包括命令本身）</li>
+<li>$* ：和$@相同，但”$<em>“ 和 “$@”(加引号)并不同，”$</em>“将所有的参数解释成一个字符串，而”$@”是一个参数数组。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ x<span class="variable">$1</span> != x ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...有参数</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...没有参数</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></div>
+]]></content>
   </entry>
 </search>
