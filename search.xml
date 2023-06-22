@@ -656,13 +656,13 @@
 </ul>
 <h3 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h3><p>类图是面向对象系统建模中最常用和最重要的图，是定义其它图的基础。类图主要是用来显示系统中的类、接口以及它们之间的静态结构和关系的一种静态模型。类图中最基本的元素是类、接口。软件设计师设计出类图后，程序员就可以用代码实现类图中包含的内容。</p>
 <p>本单元总体架构实现后我的UML类图即为下图所示：</p>
-<p><img lazyload src="/images/loading.svg" data-src="D:\important\2023Spring\OO\OOUnit4\uml2.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit4/pic_oo_unit4/uml2.png"></p>
 <h3 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a>状态图</h3><p>状态图是系统分析的一种常用工具，它通过建立类对象的生存周期模型来描述对象随时间变化的动态行为。</p>
 <p>一个状态图表示一个状态机，主要用于表现从一个状态到另一个状态的控制流。它不仅可以展现一个对象拥有的状态，还可以说明事件（如消息的接收、错误、条件变更等）如何随着时间的推移来影响这些状态。</p>
 <p>状态图用于对系统的动态方面建模，动态方面指出现在系统结构中任一对象按事件排序的行为，其中这些对象可以是类、接口、构件和节点。</p>
-<p><img lazyload src="/images/loading.svg" data-src="D:\important\2023Spring\OO\OOUnit4\state.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit4/pic_oo_unit4/state.png"></p>
 <h3 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h3><p>时序图(Sequence Diagram)，又名序列图、循序图，是一种UML交互图。它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。</p>
-<p><img lazyload src="/images/loading.svg" data-src="D:\important\2023Spring\OO\OOUnit4\1.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://github.com/CrystalSim/CrystalSim.github.io/raw/main/2023/06/22/BUAA-OO-Unit4/pic_oo_unit4/1.png"></p>
 <h2 id="四个单元架构设计思维的演进及感想"><a href="#四个单元架构设计思维的演进及感想" class="headerlink" title="四个单元架构设计思维的演进及感想"></a>四个单元架构设计思维的演进及感想</h2><h3 id="第一单元：表达式解析"><a href="#第一单元：表达式解析" class="headerlink" title="第一单元：表达式解析"></a>第一单元：表达式解析</h3><p>感觉这一单元真的是四个单元中最难的一单元（可能因为刚接触面向对象的思想）说起来就是前几周的日子在每周二晚上拿到题目，周三开始住在咖啡厅、教室写代码和debug中<strong>艰难</strong>地度过:crying_cat_face:</p>
 <p>本单元主要利用<strong>递归下降</strong>的思想对表达式进行解析、化简，也初次接触了层次化管理的思想。</p>
 <p>经过这一单元的学习，我对面向对象的思想和方法有了一个全新的认识，也意识到了代码架构的重要性。因为第一单元我在思路不太清晰的情况下就直接开始敲代码，导致代码很冗长、架构不够漂亮、方法也很繁琐，可读性也很差，所以以后几单元中下意识开始注意自己的架构问题。</p>
