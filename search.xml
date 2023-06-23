@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>BUAA-OO-Unit1总结</title>
-    <url>/2023/06/22/BUAA-OO-Unit1/</url>
+    <url>/2023/03/07/BUAA-OO-Unit1/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一单元主要通过对表达式结构进行建模，完成多变量多项式的括号展开，初步体会层次化设计思想。主要考察了Java基础语法和<strong>基本容器</strong>的使用，扩展BNF描述的形式化表述和<strong>正则表达式</strong>、<strong>递归下降</strong>等方法的使用。</p>
 <p>本单元一共有三次作业，第一次作业是多变量表达式的展开化简，第二次作业加入三角函数和自定义函数的形式，第三次作业加入求导因子dx，dy，dz，又新增了求导功能。这三次作业难度是层层递进的，经过近一个月，第一单元的学习终于临近结束，在本篇博客里，我将详细分析这三次作业的框架结构和注意事项，并分享我学习第一单元的心得体会。</p>
 <h2 id="基于度量来分析自己的程序结构"><a href="#基于度量来分析自己的程序结构" class="headerlink" title="基于度量来分析自己的程序结构"></a>基于度量来分析自己的程序结构</h2><h3 id="度量分析"><a href="#度量分析" class="headerlink" title="度量分析"></a>度量分析</h3><ul>
@@ -846,6 +846,9 @@
 </ul>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ x<span class="variable">$1</span> != x ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...有参数</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="comment">#...没有参数</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></div>
 ]]></content>
+      <tags>
+        <tag>OS</tag>
+      </tags>
   </entry>
   <entry>
     <title>Begin a blog</title>
@@ -873,6 +876,119 @@
 ]]></content>
       <tags>
         <tag>begin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>lab4-challenge 实验报告</title>
+    <url>/2023/06/23/Lab4-Challenge/</url>
+    <content><![CDATA[<h2 id="任务背景"><a href="#任务背景" class="headerlink" title="任务背景"></a>任务背景</h2><p>信号（英语：Signal）是 Unix、类 Unix 以及其他 POSIX 兼容的操作系统中进程间通讯的一种有限制的方式。它是一种异步的通知机制，用来提醒进程一个事件已经发生。当一个信号发送给一个进程，操作系统会打断进程正常的控制流程，此时，任何非原子操作都将被打断。如果进程注册了信号的处理函数，那么它将被执行，否则就执行默认的处理函数。信号的机制类似于硬件中断（异常），不同之处在于中断由处理器发出并由内核处理，而信号由内核发出并由用户程序处理。除了进程通过系统调用向另一进程（或它自身）发出的信号，内核还可以将发生的中断通过信号通知给引发中断的进程。如果说系统调用是一种用户程序通知内核的机制，那么信号就是内核通知用户程序的机制。</p>
+<h2 id="实验思路"><a href="#实验思路" class="headerlink" title="实验思路"></a>实验思路</h2><h3 id="一、准备阶段"><a href="#一、准备阶段" class="headerlink" title="一、准备阶段"></a>一、准备阶段</h3><ul>
+<li>在头文件中添加相关数据结构的定义如下：</li>
+</ul>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">sigset_t</span> &#123;</span>	<span class="comment">//信号集</span></span><br><span class="line">    <span class="type">int</span> sig[<span class="number">2</span>]; <span class="comment">//最多 32*2=64 种信号</span></span><br><span class="line">&#125;<span class="type">sigset_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sigaction</span> &#123;</span>	<span class="comment">//</span></span><br><span class="line">    <span class="type">void</span> (*sa_handler)(<span class="type">int</span>);    <span class="comment">//信号处理函数</span></span><br><span class="line">    <span class="type">sigset_t</span> sa_mask;   <span class="comment">//运行信号处理函数过程中的信号掩码</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Message</span> &#123;</span><span class="comment">//每个进程中的消息处理队列</span></span><br><span class="line">    <span class="type">int</span> signum;	<span class="comment">//信号编号</span></span><br><span class="line">    LIST_ENTRY(Message) sig_free_link;</span><br><span class="line">    LIST_ENTRY(Message) sig_wait_link;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">LIST_HEAD(sig_free_list, Message); </span><br><span class="line">LIST_HEAD(sig_wait_list, Message); </span><br><span class="line"><span class="comment">// sig_free_list，sig_wait_list代表Message连接而成的链表头的数据类型</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<ul>
+<li>在env进程块中添加定义如下，主要添加：<ul>
+<li>进程要处理的信号链</li>
+<li>该进程正在运行的信号的栈（重入）及对应栈顶</li>
+<li>信号处理入口</li>
+<li>该进程对应的掩码</li>
+<li>该进程对应64个信号的处理结构体</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Env</span> &#123;</span></span><br><span class="line">	......</span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sig_wait_list</span> <span class="title">env_sigList</span>;</span>	<span class="comment">//该进程要处理的信号链</span></span><br><span class="line">	<span class="type">int</span> env_running_sig[<span class="number">100</span>];	<span class="comment">//该进程当前正在运行的信号栈</span></span><br><span class="line">	<span class="type">int</span> env_sig_top;	<span class="comment">//对应正在处理的信息栈顶</span></span><br><span class="line">	u_int env_user_signal_entry;</span><br><span class="line">	<span class="comment">//信号处理入口</span></span><br><span class="line"></span><br><span class="line">	<span class="type">sigset_t</span> env_mask;	<span class="comment">//该进程对应的掩码</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sigaction</span> <span class="title">env_sigaction</span>[65];</span>	<span class="comment">//该进程信号处理结构体</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="二、信号的注册"><a href="#二、信号的注册" class="headerlink" title="二、信号的注册"></a>二、信号的注册</h3><p>信号的注册函数采用下面的函数：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);</span><br></pre></td></tr></table></figure></div>
+
+<p>其中 <code>signum</code> 表示需要处理信号的编号，<code>act</code> 表示新的信号处理结构体，旧的信号处理结构体则需要在 <code>oldact != NULL</code> 时保存该指针在对应的地址空间中。</p>
+<p>该函数为当前进程注册处理函数，若成功则返回0，反之返回-1（如signum不合法，act为空等）</p>
+<ul>
+<li>信号注册实际上就是修改对应进程控制块 <code>env_sigaction[signum]</code>中的信号处理函数，所以需要用系统调用来陷入内核</li>
+<li>我在用户态的函数实现都放在user&#x2F;lib&#x2F;signal.c文件下，其中修改进程掩码及向进程发送信号都需要陷入内核进行操作</li>
+</ul>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sys_set_sig</span><span class="params">(<span class="type">int</span> signum, <span class="type">const</span> <span class="keyword">struct</span> sigaction *act, <span class="keyword">struct</span> sigaction *oldact)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> (act == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (oldact != <span class="literal">NULL</span>) &#123;</span><br><span class="line">		*oldact = curenv-&gt;env_sigaction[signum];</span><br><span class="line">	&#125;</span><br><span class="line">	curenv-&gt;env_sigaction[signum] = (*act);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="三、信号的发送"><a href="#三、信号的发送" class="headerlink" title="三、信号的发送"></a>三、信号的发送</h3><p>发送信号操作在用户态执行下面的函数：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">int kill(u_int envid, int sig);</span><br></pre></td></tr></table></figure></div>
+
+<p>然后进行系统调用陷入内核后，主要实现函数为kern&#x2F;env.c中的insertHeadSig函数，具体实现如下：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">insertHeadSig</span><span class="params">(<span class="type">int</span> envid, <span class="type">int</span> signum)</span> &#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Env</span>* <span class="title">target</span>;</span></span><br><span class="line">	<span class="comment">//进程号不合法(signum不合法在之前已经检查过)</span></span><br><span class="line">	<span class="keyword">if</span> (envid2env(envid, &amp;target, <span class="number">0</span>) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//env下的sigFreeList为空</span></span><br><span class="line">	<span class="keyword">if</span> (LIST_EMPTY(&amp;sigFreeList)) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//取freelist的头元素sig</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Message</span> *<span class="title">sig</span> =</span> LIST_FIRST(&amp;sigFreeList);</span><br><span class="line">	LIST_REMOVE(sig, sig_free_link);</span><br><span class="line">	<span class="comment">//初始化</span></span><br><span class="line">	<span class="built_in">memset</span>(sig, <span class="number">0</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> Message));</span><br><span class="line">	<span class="comment">//设置sig的信息编号</span></span><br><span class="line">	sig-&gt;signum = signum;</span><br><span class="line">	<span class="comment">//插入target对应等待队列队头</span></span><br><span class="line">	LIST_INSERT_HEAD(&amp;target-&gt;env_sigList, sig, sig_wait_link);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>主要思路就是先排除不合法情况，然后从free队列中取一个Message将其初始化，并记录信号编号，然后将这个信号插入envid对应进程块即将处理信号队列的头部（优先处理）</p>
+<h3 id="四、信号的处理"><a href="#四、信号的处理" class="headerlink" title="四、信号的处理"></a>四、信号的处理</h3><p>信号的处理是lab4-challenge一大难点:cry:</p>
+<ul>
+<li><p>当进程被调度在之后继续运行时，首先需要处理自身收到的所有信号，对于后面来的信号，认为其优先级更高而先进行处理。对于被阻塞信号，<strong>保留</strong>其信号信息。对于未阻塞信号，则需要跳转到信号处理函数，如果未注册处理函数，则按照默认的处理动作进行。</p>
+</li>
+<li><p>主要问题是信号的处理函数一般在用户态，但是信号的处理函数等信息保存在内核（env进程块中），所以我们在处理信号时需要读取内核态的待处理信号编号及其处理函数地址，再返回用户态进行处理。</p>
+</li>
+<li><p>而且进程必须处理完<strong>所有的未阻塞信号</strong>，当进程在一个信号处理函数中，也可能接收到其他新的信号；</p>
+<p>这时应当<strong>保存此时的上下文环境</strong>，接受并处理新的信号后再返回原来的位置</p>
+</li>
+</ul>
+<p>对于此我的做法是在每次陷入内核前调用do_signal信号处理函数，下面这个部分保证在处理完异常之后，恢复现场之前，调用do_signal函数，处理进程的信号</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">.text</span><br><span class="line">FEXPORT(ret_from_exception)</span><br><span class="line">	move    a0, sp 	# 给do_siganl传入参数</span><br><span class="line">	addiu   sp, sp, -8</span><br><span class="line">	nop</span><br><span class="line">	jal     do_signal</span><br><span class="line">	nop</span><br><span class="line">	addiu   sp, sp, 8	</span><br><span class="line">	RESTORE_SOME</span><br><span class="line">	lw      k0, TF_EPC(sp)</span><br><span class="line">	lw      sp, TF_REG29(sp) /* Deallocate stack */</span><br><span class="line">.set noreorder</span><br><span class="line">	jr      k0</span><br><span class="line">	rfe</span><br><span class="line">.set reorder</span><br></pre></td></tr></table></figure></div>
+
+<p>进程信号的具体处理实现如下：</p>
+<ol>
+<li><p>遍历该进程等待队列的信号，判断现在是否在一个信号处理函数中(即重入情况)</p>
+<ul>
+<li>如果在重入情况，则取进程中这个被打断执行信号的对应掩码判断信号是否需要被阻塞</li>
+<li>如果不是，则根据当前进程掩码的对应位置判断信号是否需要被阻塞</li>
+</ul>
+</li>
+<li><p>如果该信号没有被阻塞，则从等待队列中移出，进行处理</p>
+</li>
+<li><p>处理时，如果该进程有注册相应的处理函数，或者信号编号为SIG_SEGV或SIG_KILL或SIG_TERM，才进行处理，反之默认不处理</p>
+</li>
+<li><p>跳转到处理函数前，先将当前的Trapframe压入异常处理栈，再将此时的现场保存在新的TrampFrame中，具体实现代码如下：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (curenv-&gt;env_sigaction[signum].sa_handler != <span class="literal">NULL</span></span><br><span class="line">   || signum == SIG_SEGV|| signum==SIG_KILL || signum==SIG_TERM) &#123;</span><br><span class="line">       <span class="comment">//处理</span></span><br><span class="line">       <span class="comment">//将发生异常时的现场保存在tmp_tf中</span></span><br><span class="line">       <span class="class"><span class="keyword">struct</span> <span class="title">Trapframe</span> <span class="title">temp</span> =</span> *tf;</span><br><span class="line">       <span class="comment">//如果用户的栈指针不在异常处理栈，就将栈指针指向异常处栈</span></span><br><span class="line">       <span class="keyword">if</span> (tf-&gt;regs[<span class="number">29</span>] &lt; USTACKTOP || tf-&gt;regs[<span class="number">29</span>] &gt;= UXSTACKTOP) &#123;</span><br><span class="line">           tf-&gt;regs[<span class="number">29</span>] = UXSTACKTOP;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//将当前的Trapframe压入异常处理栈中</span></span><br><span class="line">       tf-&gt;regs[<span class="number">29</span>] -= <span class="keyword">sizeof</span>(<span class="keyword">struct</span> Trapframe);</span><br><span class="line">       *(<span class="keyword">struct</span> Trapframe *)tf-&gt;regs[<span class="number">29</span>] = temp;</span><br><span class="line">       <span class="comment">//如果用户已经注册了信号处理函数	</span></span><br><span class="line">       <span class="keyword">if</span>(curenv-&gt;env_user_signal_entry) &#123;</span><br><span class="line">           <span class="comment">//将指向Trampfram的指针放入a0 并在栈上为该参数分配空间</span></span><br><span class="line">           tf-&gt;regs[<span class="number">4</span>] = tf-&gt;regs[<span class="number">29</span>];</span><br><span class="line">           tf-&gt;regs[<span class="number">29</span>] -= <span class="keyword">sizeof</span>(tf-&gt;regs[<span class="number">4</span>]); </span><br><span class="line">           <span class="comment">//将signum放入a1 并在栈上为其分配空间</span></span><br><span class="line">           tf-&gt;regs[<span class="number">5</span>] = signum;</span><br><span class="line">           tf-&gt;regs[<span class="number">29</span>] -= <span class="keyword">sizeof</span>(tf-&gt;regs[<span class="number">5</span>]);</span><br><span class="line">           <span class="comment">//将处理函数放入a2 并在栈上为其分配空间</span></span><br><span class="line">           tf-&gt;regs[<span class="number">6</span>] = curenv-&gt;env_sigaction[signum].sa_handler;</span><br><span class="line">           tf-&gt;regs[<span class="number">29</span>] -= <span class="keyword">sizeof</span>(tf-&gt;regs[<span class="number">6</span>]);</span><br><span class="line">           <span class="comment">//将该信号压入信号处理栈</span></span><br><span class="line">           sys_push_sig(signum);</span><br><span class="line">           <span class="comment">//将EPC置为用户态的信号处理函数</span></span><br><span class="line">           <span class="comment">//这样在进程返回用户态运行时，就会执行用户态处理函数，进行信号处理</span></span><br><span class="line">           tf-&gt;cp0_epc = curenv-&gt;env_user_signal_entry;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h3 id="五、细节实现"><a href="#五、细节实现" class="headerlink" title="五、细节实现"></a>五、细节实现</h3><ul>
+<li><p>进程的初始化</p>
+<ul>
+<li><p>在env.c 中维护256个初始信号并将它们插入一个空free信号队列，每次发送新信号时从中取出</p>
+</li>
+<li><p>在进程被创建时将其所有新增加成员初始化，包括将64个处理函数置NULL，掩码清空，信息栈顶设为-1等</p>
+</li>
+</ul>
+</li>
+<li><p>当用户程序访问了页表中未映射且地址严格小于 <code>0x3FE000</code> 的虚拟页时需要被动向自身进程发送SIGSEGV信号，此处实现在kern&#x2F;tlbex.c中的passive_alloc函数中判断，当va小于UTEMP时，调用sys_send_sig发送信号</p>
+</li>
+<li><p>用户程序进入入口为user&#x2F;lib下的libman函数</p>
+<ul>
+<li>该函数第一步设置自身进程的信息处理函数，该处理函数被单独封装（形式类似cow_entry）</li>
+</ul>
+</li>
+<li><p>在这个用户态信号处理函数中</p>
+<ul>
+<li>该函数的三个参数即为do_signal时保存的sp，signum以及处理函数sa_handler</li>
+<li>如果sa_handler不为空，则运行信号处理函数，并将处理完的信号从栈中弹出；设置当前进程的现场</li>
+<li>否则，如果信息编号为SIG_SEGV或者SIG_KILL或者SIG_TERM，也弹出该信号，结束进程</li>
+</ul>
+</li>
+</ul>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>主要利用实验平台样例和自己构造测试样例来进行测试</p>
+<p>构造的测试样例主要包括以下几方面</p>
+<ul>
+<li>检查注册函数</li>
+<li>检查子进程继承父进程处理函数&#x2F;写时复制是否正确</li>
+<li>检查信号的注册和发送是否正确</li>
+<li>检查sigprocmask是否正确</li>
+<li>检查用户态函数sigemptyset、sigfillset、sigaddset、sigdelset、sigismember是否正确</li>
+<li>检查空指针异常处理</li>
+</ul>
+<h2 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h2><p>主要在思考如何跳转到信号处理函数、如何保存上下文、如何实现信号的重入等情况</p>
+]]></content>
+      <tags>
+        <tag>OS</tag>
       </tags>
   </entry>
 </search>
